@@ -1,0 +1,34 @@
+/// size for responsive ------------///
+
+// size standard for responsive 
+
+// size smart phone 
+$size-smartphone:768px;
+// size tablet
+$size-min-tablet:769px;
+$size-tablet:1024px;
+// size laptop
+$size-min-laptop:1025px;
+$size-laptop:1279px;
+// size larg desktop
+$size-largdesktop:1280px;
+
+
+/*    copy code responsive 
+        
+
+         @media only screen and (max-width:$size-smartphone) {
+          
+         }
+         @media only screen and (min-width:$size-min-tablet) and (max-width:$size-tablet) {
+           
+         }
+         @media only screen and (min-width:$size-min-laptop) and (max-width:$size-laptop) {
+        
+         }
+         @media only screen and (min-width:$size-largdesktop){
+            
+         }
+
+
+*/

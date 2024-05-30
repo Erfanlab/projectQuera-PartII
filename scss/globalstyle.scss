@@ -1,0 +1,141 @@
+
+//font------------------------------////
+@import url("https://v1.fontapi.ir/css/Yekan");
+$font-stack: "yekan";
+///font-color///
+/// #EFEBFF
+/// #E0EDFF
+
+$main-color-border: #e0edff;
+$second-color-border: #efebff00;
+$font-color-white: #ffffff;
+$font-color-black: #000000;
+$font-color-gray: #444749;
+$font-color-gray-opacity: #666666;
+///font---size--------- desktop   -------///
+$font-sm: 16px;
+$font-md: 20px;
+$font-md-lg: 32px;
+$font-lg: 46px;
+$font-xl: 64px;
+//font---bold++size///
+@mixin font-size-bold-sm {
+  font-size: $font-sm;
+  font-weight: bolder;
+}
+@mixin font-size-bold-md {
+  font-size: $font-md;
+  font-weight: bolder;
+}
+@mixin font-size-bold-md-lg {
+  font-size: $font-md-lg;
+  font-weight: bolder;
+}
+@mixin font-size-bold-lg {
+  font-size: $font-lg;
+  font-weight: bolder;
+}
+
+@mixin font-size-bold-xl {
+  font-size: $font-xl;
+  font-weight: bolder;
+}
+//font---bold++size///
+/***********/
+//font---lighter++size///
+@mixin font-size-lighter-sm {
+  font-size: $font-sm;
+  font-weight: lighter;
+}
+@mixin font-size-lighter-md {
+  font-size: $font-md;
+  font-weight: lighter;
+}
+@mixin font-size-lighter-md-lg {
+  font-size: $font-md-lg;
+  font-weight: lighter;
+}
+@mixin font-size-lighter-lg {
+  font-size: $font-lg;
+  font-weight: lighter;
+}
+
+@mixin font-size-lighter-xl {
+  font-size: $font-xl;
+  font-weight: lighter;
+}
+//font---lighter++size///
+///font---size--------- desktop   -------///
+$font-verysmall: 10px;
+$font-sm-p: 12px;
+$font-verymed: 14px;
+$font-md-p: 24px;
+$font-md-lg-p: 28px;
+$font-lg-p: 32px;
+$font-xl-p: 48px;
+//font---bold++size///
+@mixin font-size-bold-sm-p {
+  font-size: $font-sm-p;
+  font-weight: bolder;
+}
+@mixin font-size-bold-md-p {
+  font-size: $font-md-p;
+  font-weight: bolder;
+}
+@mixin font-size-bold-md-lg-p {
+  font-size: $font-md-lg-p;
+  font-weight: bolder;
+}
+@mixin font-size-bold-lg-p {
+  font-size: $font-lg-p;
+  font-weight: bolder;
+}
+
+@mixin font-size-bold-xl-p {
+  font-size: $font-xl-p;
+  font-weight: bolder;
+}
+//font---bold++size///
+/***********/
+//font---lighter++size///
+@mixin font-size-lighter-sm-p {
+  font-size: $font-sm-p;
+  font-weight: lighter;
+}
+@mixin font-size-lighter-md-p {
+  font-size: $font-md-p;
+  font-weight: lighter;
+}
+@mixin font-size-lighter-md-lg-p {
+  font-size: $font-md-lg-p;
+  font-weight: lighter;
+}
+@mixin font-size-lighter-lg-p {
+  font-size: $font-lg-p;
+  font-weight: lighter;
+}
+
+@mixin font-size-lighter-xl-p {
+  font-size: $font-xl-p;
+  font-weight: lighter;
+}
+//font---lighter++size         phone///
+
+// font ----------------//////
+$transition: all 0.5s ease;
+
+//////--------------flex-center---------------//////
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+}
+@mixin flex-center-column {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}

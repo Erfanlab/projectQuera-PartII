@@ -1,0 +1,3100 @@
+@import "./globalstyle.scss";
+@import "./globalcolor.scss";
+@import "./responsive-page1.scss";
+
+:root {
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+}
+// header scss
+
+body {
+  @include flex-center-column;
+  padding: 0;
+  margin: 0;
+  font-family: $font-stack;
+
+  /////////////////phone  480
+  @media only screen and (max-width: $size-smartphone) {
+    header {
+      overflow: hidden;
+      font-family: $font-stack;
+      height: 450px;
+      width: 100%;
+      background: linear-gradient(
+        to bottom,
+        $main-color-background,
+        $second-color-background
+      );
+      .nav-bar {
+        z-index: 2;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        height: 11%;
+        width: 100%;
+        @include flex-center;
+        background-color: $primary-background-color;
+
+        .nav-bar-main {
+          overflow: hidden;
+          width: 1232px;
+          height: 50%;
+          opacity: 0px;
+          margin: 0;
+          @include flex-center;
+          justify-content: start;
+          margin: 0 20px;
+          padding: 0;
+          .nav-bar-left {
+            overflow: hidden;
+            @include font-size-lighter-sm;
+            display: none;
+            cursor: pointer;
+            gap: 50px;
+
+            button {
+              cursor: pointer;
+              width: 167px;
+              height: 40px;
+              border: 0 solid;
+              border-radius: 6px;
+              font-family: $font-stack;
+              @include font-size-lighter-sm;
+              color: $font-color-white;
+              background-color: $items-color-primary;
+            }
+
+            .darkMod {
+              overflow: hidden;
+              width: 40px;
+              height: 40px;
+              @include flex-center;
+              background-color: $primary-background-color;
+              border: 1px solid $main-color-border;
+              border-radius: 6px;
+            }
+            .close {
+              transition: all 1ms ease;
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              transition: all 200ms;
+              font-size: 30px;
+              font-weight: bold;
+              text-decoration: none;
+              color: #333;
+            }
+            .darkMod-select {
+              visibility: hidden;
+              color: $font-color-black;
+              @include flex-center-column;
+
+              font-family: $font-stack;
+              gap: 10px;
+              position: absolute;
+              border-radius: 8px;
+              background-color: $primary-background-color;
+              border: 1px solid $darkMod-border;
+              margin: 0;
+              margin-top: 250px;
+              margin-left: 200px;
+              width: 250px;
+              height: 180px;
+              :last-child {
+                border: none;
+              }
+              p {
+                @include font-size-lighter-sm;
+                padding: 0;
+                margin: 0;
+                @include flex-center;
+                border-bottom: 1px solid $darkMod-border;
+                width: 80%;
+                height: 20%;
+                gap: 5px;
+                padding-bottom: 10px;
+                img {
+                  position: absolute;
+                  @include flex-center;
+                  right: 40px;
+                  margin: 0;
+                  margin-top: 5px;
+                  padding: 0;
+                  width: 22px;
+                  height: 22px;
+                }
+              }
+            }
+            .darkMod-select:target {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          .nav-bar-right {
+            overflow: hidden;
+            width: 90%;
+            gap: 20px;
+            @include flex-center;
+           svg{
+            width: 24px;
+            height: 24px;
+           }
+
+            //////
+            .menubar {
+              margin: 0;
+              @include font-size-bold-md-lg;
+            }
+            strong {
+              margin: 0;
+              width: 100%;
+              @include font-size-bold-sm;
+            }
+            .nav-bar-ul {
+              width: 100%;
+              height: 100%;
+              gap: 20px;
+              display: none;
+              justify-content: start;
+              list-style: none;
+              font-family: $font-stack;
+              margin: 0;
+              padding: 0;
+              a {
+                @include font-size-lighter-sm;
+                color: $font-color-black;
+                width: 15%;
+                cursor: pointer;
+                text-decoration-line: none;
+              }
+              :nth-child(1) {
+                color: $items-color-primary;
+                @include font-size-lighter-sm;
+                li {
+                  position: absolute;
+                  width: 50%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+        ///finish nav bar
+      }
+      .header-main {
+        overflow: hidden;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        .main-up {
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          width: 99%;
+          height: 55%;
+
+          .header-main-text {
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 55%;
+            margin: 0;
+            gap: 5px;
+            margin-top: 8px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            h2 {
+              margin: 0;
+              margin-top: 50px;
+              position: relative;
+              @include font-size-lighter-sm;
+            }
+            h1 {
+              margin: 0;
+              margin-bottom: 50px;
+              position: relative;
+              @include font-size-bold-md-p;
+            }
+            .text-button {
+              overflow: hidden;
+              height: 15%;
+              width: 100%;
+              margin: 0;
+              margin-top: 200px;
+              display: flex;
+              @include flex-center;
+              position: absolute;
+
+              p {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                width: 75%;
+                @include font-size-lighter-sm-p;
+              }
+            }
+            .line-head {
+              position: absolute;
+              overflow: hidden;
+              display: flex;
+              flex-direction: row;
+              @include flex-center;
+              margin: 0;
+              margin-top: 150px;
+              width: 100%;
+              height: 7%;
+              svg{
+                width: 150px;
+                height: 150px;
+              }
+            }
+          }
+
+
+
+           .allstars {
+            overflow: hidden;
+            z-index: 0;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            @include flex-center;
+            flex-direction: row;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+
+            .star1 {
+              overflow: hidden;
+              position: relative;
+              margin: 0;
+              padding: 0;
+              width: 8%;
+              margin-bottom: 150px;
+              svg{
+                width: 24px;
+                height: 24px;
+            }
+            }
+            .star2 {
+              overflow: hidden;
+              width: 8%;
+              margin-top: 120px;
+              margin-right: 250px;
+              svg{
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+          .circle-right {
+            overflow: hidden;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            margin-right: 10px;
+            margin-top: 5px;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+          }
+          .circle-left {
+
+            overflow: hidden;
+            z-index: 0;
+            width: 228px;
+            height: 228px;
+            margin: 0;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            svg{
+                width: 80%;
+                height: 80%;
+            }
+          }
+        
+          
+        }
+        .header-down {
+          overflow: hidden;
+          @include flex-center;
+          width: 90%;
+          height: 100px;
+          .header-button {
+            overflow: hidden;
+            @include flex-center;
+            flex-direction: row;
+            gap: 16px;
+            a{
+                width: 156px;
+                height: 40px;
+                background-color: #ebf3fe;
+                text-decoration-line:none ;
+                border-radius: 6px;
+                button{
+                  color: $items-color-primary;
+                  border-radius: 6px;
+                  background-color: #ebf3fe;
+                }}
+            button {
+              cursor: pointer;
+              border: 0;
+              font-family: $font-stack;
+              @include flex-center;
+              @include font-size-bold-sm-p;
+              width: 156px;
+              height: 40px;
+              border-radius: 6px;
+              background-color: $items-color-primary;
+              color: $font-color-white;
+            }
+          }
+        }
+      }
+    }
+
+    ///// ------ finsh nav bar + header + main header -----////
+
+    //main scss
+    main {
+      font-family: $font-stack;
+      margin:0;
+      width: 100%;
+      @include flex-center-column;
+      justify-content: start;
+      overflow: hidden;
+      gap: 20px;
+      .main-slid1-phone {
+        overflow: hidden;
+        margin: 0;
+        @include flex-center-column;
+        justify-content: center;
+        top: 0;
+        height: 50%;
+        width: 90%;
+
+        img {
+            @include flex-center-column;
+            justify-content: start;
+            margin: 0;
+          height: auto;
+          width: 100%;
+        }
+      }
+      .main-slid1-desktop {
+        overflow: hidden;
+        margin: 0;
+        @include flex-center-column;
+        display: none;
+        justify-content: center;
+        top: 0;
+        height: 50%;
+        width: 90%;
+
+        img {
+            @include flex-center-column;
+            justify-content: start;
+            margin: 0;
+          height: auto;
+          width: 100%;
+        }
+      }
+
+      ///main slid 2///
+      .main-slid2 {
+        width: 100%;
+        overflow: hidden;
+        gap: 20px;
+        @include flex-center-column;
+        justify-content: start;
+        .main-slid2-title {
+          @include flex-center-column;
+          justify-content: start;
+          gap: 40px;
+          width: 90%;
+          height: 150px;
+          margin: 0;
+          padding: 0;
+          h2 {
+            @include font-size-bold-md;
+        }
+          div {
+            width: 100%;
+            height: 10px;
+            @include flex-center;
+            p {
+              @include font-size-lighter-sm-p;
+              width: 100%;
+            }
+          }
+        }
+        .main-slid2-card {
+          overflow: hidden;
+          gap: 5px;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+          @include flex-center;
+          flex-wrap: wrap;
+          ///cards ///
+          .main-slid2-card {
+            border: 1px solid #F5F6F8;
+            box-shadow: 0 0 24px #00000008;
+            border-radius: 24px;
+            background-color: $primary-background-color;
+            width: 45%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            @include flex-center-column;
+            gap: 5px;
+           svg{
+            width: 40px;
+            height: 40px;
+           }
+            .main-card-text {
+              margin: 0;
+              padding: 0;
+              @include flex-center-column;
+              h3 {
+                font-family: $font-stack;
+                font-size: 12px;
+                font-weight: bold;
+              }
+              p {
+                width: 80%;
+                font-size: $font-verysmall;
+              }
+            }
+          }
+        }
+      }
+
+      ///main slid 3
+
+      .main-slid3 {
+        position: relative;
+        overflow: hidden;
+        @include flex-center-column;
+        width: 90%;
+        gap: 30px;
+        margin-top: 60px;
+
+        .main-slid3-text {
+          @include flex-center-column;
+          width: 100%;
+          font-family: $font-stack;
+          strong {
+            margin: 0;
+            height: 10%;
+            @include font-size-lighter-sm-p;
+          }
+          .main-slid3-image-up {
+            display: flex;
+            width: 55%;
+            margin-top: 20px;
+            img {
+              width: 100%;
+            }
+          }
+          p {
+            width: 95%;
+            height: 10%;
+            @include font-size-lighter-sm-p;
+          }
+          h2 {
+            margin: 0;
+            width: 100%;
+            height: 50%;
+            @include font-size-bold-md-p;
+          }
+          button {
+            @include flex-center;
+            cursor: pointer;
+            background-color: $second-color-background;
+            height: 50px;
+            width:100%;
+            font-family: $font-stack;
+            @include font-size-bold-sm-p;
+            color: $items-color-primary;
+            border: none;
+            svg {
+              cursor: pointer;
+              @include font-size-bold-md;
+              height: 50%;
+              width: 30px;
+            }
+          }
+        }
+
+        .main-slid3-image-down {
+          display: none;
+          width: 60%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      //slid4
+
+      .main-slid4 {
+        gap: 50px;
+        width: 90%;
+        height: 750px;
+        overflow: hidden;
+        @include flex-center-column;
+
+        &-title {
+          @include flex-center-column;
+          font-family: $font-stack;
+          width: 100%;
+          h2 {
+            @include font-size-bold-md-p;
+          }
+          p {
+            @include font-size-bold-sm-p;
+            margin: 0;
+            color: $font-color-gray;
+            width: 100%;
+          }
+        }
+        &-button {
+          width: 100%;
+          height: 50px;
+          @include flex-center;
+          gap: 10px;
+          button {
+            cursor: pointer;
+            @include flex-center;
+            width: 40px;
+            height: 40px;
+            border: 0.2px solid $font-color-gray-opacity;
+            border-radius: 6px;
+            background-color: $primary-background-color;
+            @include font-size-lighter-md;
+          }
+        }
+        /////-----------cars slid4---------/////
+        &-allCard {
+          position: relative;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          font-family: $font-stack;
+          @include flex-center-column;
+          flex-wrap: wrap;
+          width: 100%;
+          height: 50%;
+          gap: 5px;
+          margin: 0;
+          margin-top: 50px;
+          padding: 0;
+
+          .slid4-left {
+            position: relative;
+            @include flex-center-column;
+            flex-wrap: wrap;
+            margin: 0;
+            margin-left: 200px;
+            margin-right: 10px;
+            padding: 0;
+            gap: 20px;
+            width: 80%;
+            height: 70%;
+
+            &-card {
+              position: relative;
+              width: 82%;
+              height: 100%;
+              box-shadow: 0 0 10px #8080801e;
+              background-color: $primary-background-color;
+              gap: 10px;
+              border-radius: 16px;
+              border: 1px solid $color-border-card;
+              &-up {
+                position: relative;
+                width: 97%;
+                height: 50px;
+                margin: 0;
+                margin-right: 10px;
+                gap: 5px;
+                @include flex-center;
+                flex-wrap: wrap;
+                justify-content: start;
+                text-align: start;
+                img{
+                    width: 40px;
+                    height: 40px;
+                }
+              }
+              &-about {
+                color: $font-color-gray;
+                @include flex-center-column;
+                margin: 10px;
+                margin-top: 5px;
+                font-size: 10px;
+                color: $font-color-gray-opacity;
+              }
+              &-txt {
+                @include flex-center-column;
+                justify-content: start;
+                align-items: start;
+                h3 {
+                  font-family: $font-stack;
+                  margin: 0;
+                  font-size: $font-verymed;
+                }
+                span {
+                  margin: 0;
+                  padding: 0;
+                  color: $font-color-gray-opacity;
+                  @include font-size-lighter-sm-p;
+                }
+              }
+            }
+          }
+          
+          
+        }
+        // finish slid 4
+      }
+      /// finish main body-----
+    }
+
+    //footer scss
+    .circle-end {
+      display: none;
+      overflow: hidden;
+      position: absolute;
+      left: 35%;  
+      z-index: -1;
+      width: 100%;
+      height: 50%;
+      svg{
+        width: 250px;
+
+      }
+    }
+    footer {
+      font-family: $font-stack;
+      margin-top: 100px;
+      width: 90%;
+      height: 550px;
+      @include flex-center-column;
+      justify-content: start;
+      margin: 0;
+      overflow: hidden;
+      .footer-title {
+        gap: 20px;
+        @include flex-center;
+        h2 {
+          font-size: 12px;
+          font-weight: light;
+        }
+        .footer-line {
+          width: 100px;
+          height: 0;
+          border: 1px solid $footr-line;
+        }
+      }
+      //--------footer main
+      .footer-main {
+        width: 100%;
+        height: 450px;
+        gap: 50px;
+        @include flex-center-column;
+        justify-content: start;
+        &-right-desktop {
+            display: none;    }     
+            &-right-phone {
+              margin: 0;
+              width: 100%;
+              height: 40%;
+              @include flex-center;
+              gap: 10px;
+              flex-wrap: wrap;
+              .right-footer {
+                @include flex-center-column;
+                width: 50%;
+                height: 100%;
+                gap: 10px;
+                strong {
+                  padding: 5px;
+                  border: 1px solid #8080802b;
+                  width: 90%;
+                  height: 100%;
+                  border-radius: 16px;
+                  font-size: $font-verysmall;
+                  font-weight: lighter;
+                  @include flex-center;
+                  gap: 2px;
+                 
+                }
+          }
+          address {
+            border: 1px solid #8080802b;
+            border-radius: 16px;
+            width: 35%;
+            height: 100%;
+            font-family: $font-stack;
+            font-size: $font-verysmall;
+            font-weight: lighter;
+            @include flex-center-column;
+            span {
+              color: $items-color-primary;
+              @include font-size-bold-md-p;
+            }
+            p {
+              padding:5px;
+              font-family: $font-stack;
+            }
+          }
+        }
+        /// footer main left
+
+        &-left {
+          width: 100%;
+          height: 30%;
+          margin-top: 40px;
+          font-family: $font-stack;
+          @include flex-center-column;
+          align-items: start;
+          justify-content: start;
+          text-align: start;
+          h2 {
+            width: 100%;
+            margin: 0;
+            @include font-size-bold-sm-p;
+          }
+          p {
+            @include flex-center;
+            text-align: start;
+            width: 100%;
+            @include font-size-lighter-sm-p;
+          }
+          .side-email {
+            @include flex-center;
+            position: relative;
+            align-items: start;
+            justify-content: center;
+            width: 100%;
+            .button-footer {
+              position: relative;
+              height: 60px;
+              width: 100%;
+            }
+            input {
+              overflow: hidden;
+
+              width: 280px;
+              height: 48px;
+              font-family: $font-stack;
+              padding: 5px;
+              padding-right: 20px;
+              @include flex-center;
+              text-align: start;
+              margin: 0;
+              border-radius: 10px;
+              border: 1px solid $footer-border;
+              @include font-size-lighter-sm;
+            }
+            button {
+              left: 9px;
+              top: 8px;
+              padding: 0;
+              margin: 0;
+              position: absolute;
+              width: 80px;
+              height: 45px;
+              font-family: $font-stack;
+              @include font-size-lighter-sm;
+              color: $font-color-white;
+              border: none;
+              border-radius: 8px;
+              background-color: $items-color-primary;
+            }
+          }
+        }
+      }
+
+      .footer-down {
+        overflow: hidden;
+        margin: 0;
+        margin-top: 5px;
+        width: 100%;
+        height: 12%;
+        h3 {
+          color: $font-color-gray-opacity;
+          font-family: $font-stack;
+          @include font-size-lighter-sm-p;
+        }
+      }
+    }
+  }
+
+  /////////////////tablet 481-768///////
+  @media only screen and (min-width: $size-min-tablet) and (max-width: $size-tablet) {
+    header {
+      overflow: hidden;
+      font-family: $font-stack;
+      height: 500px;
+      width: 100%;
+      margin-bottom: 50px;
+      background: linear-gradient(
+        to bottom,
+        $main-color-background,
+        $second-color-background
+      );
+
+      .nav-bar {
+        z-index: 2;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        height: 8%;
+        width: 100%;
+        @include flex-center;
+        background-color: $primary-background-color;
+
+        .nav-bar-main {
+          overflow: hidden;
+          width: 1232px;
+          height: 50%;
+          opacity: 0px;
+          margin: 0;
+          @include flex-center;
+          justify-content: start;
+          margin: 0 20px;
+          padding: 0;
+          .nav-bar-left {
+            overflow: hidden;
+            @include font-size-lighter-sm;
+            display: none;
+            cursor: pointer;
+            gap: 50px;
+
+            button {
+              cursor: pointer;
+              width: 167px;
+              height: 40px;
+              border: 0 solid;
+              border-radius: 6px;
+              font-family: $font-stack;
+              @include font-size-lighter-sm;
+              color: $font-color-white;
+              background-color: $items-color-primary;
+            }
+
+            .darkMod {
+              overflow: hidden;
+              width: 40px;
+              height: 40px;
+              @include flex-center;
+              background-color: $primary-background-color;
+              border: 1px solid $main-color-border;
+              border-radius: 6px;
+            }
+            .close {
+              transition: all 1ms ease;
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              transition: all 200ms;
+              font-size: 30px;
+              font-weight: bold;
+              text-decoration: none;
+              color: #333;
+            }
+            .darkMod-select {
+              color: $font-color-black;
+              @include flex-center-column;
+
+              font-family: $font-stack;
+              gap: 10px;
+              position: absolute;
+              border-radius: 8px;
+              background-color: $primary-background-color;
+              border: 1px solid $darkMod-border;
+              margin: 0;
+              margin-top: 250px;
+              margin-left: 200px;
+              width: 250px;
+              height: 180px;
+              :last-child {
+                border: none;
+              }
+              p {
+                @include font-size-lighter-sm;
+                padding: 0;
+                margin: 0;
+                @include flex-center;
+                border-bottom: 1px solid $darkMod-border;
+                width: 80%;
+                height: 20%;
+                gap: 5px;
+                padding-bottom: 10px;
+                img {
+                  position: absolute;
+                  @include flex-center;
+                  right: 40px;
+                  margin: 0;
+                  margin-top: 5px;
+                  padding: 0;
+                  width: 22px;
+                  height: 22px;
+                }
+              }
+            }
+            .darkMod-select:target {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          .nav-bar-right {
+            overflow: hidden;
+            width: 90%;
+            gap: 20px;
+            @include flex-center;
+
+            //////
+            .menubar {
+              margin: 0;
+              @include font-size-bold-md-lg;
+            }
+            strong {
+              margin: 0;
+              width: 100%;
+              @include font-size-bold-md;
+            }
+            .nav-bar-ul {
+              width: 100%;
+              height: 100%;
+              gap: 20px;
+              display: none;
+              justify-content: start;
+              list-style: none;
+              font-family: $font-stack;
+              margin: 0;
+              padding: 0;
+              a {
+                @include font-size-lighter-sm;
+                color: $font-color-black;
+                width: 15%;
+                cursor: pointer;
+                text-decoration-line: none;
+              }
+              :nth-child(1) {
+                color: $items-color-primary;
+                @include font-size-lighter-sm;
+                li {
+                  position: absolute;
+                  width: 50%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+        ///finish nav bar
+      }
+      .header-main {
+        overflow: hidden;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        .main-up {
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          width: 99%;
+          height: 55%;
+
+          .header-main-text {
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 55%;
+            margin: 0;
+            gap: 5px;
+            margin-top: 8px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            h2 {
+              margin: 0;
+              margin-top: 50px;
+              position: relative;
+              @include font-size-lighter-lg-p;
+            }
+            h1 {
+              margin: 0;
+              margin-bottom: 80px;
+              position: relative;
+              @include font-size-bold-xl-p;
+            }
+            .text-button {
+              overflow: hidden;
+              height: 15%;
+              width: 100%;
+              margin: 0;
+              margin-top: 300px;
+              display: flex;
+              @include flex-center;
+              position: absolute;
+
+              p {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                width: 75%;
+                @include font-size-lighter-sm-p;
+              }
+            }
+            .line-head {
+              position: absolute;
+              overflow: hidden;
+              display: flex;
+              flex-direction: row;
+              @include flex-center;
+              margin: 0;
+              margin-top: 220px;
+              width: 100%;
+              height: 10%;
+            }
+          }
+
+          .allstars {
+            overflow: hidden;
+            z-index: 0;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            @include flex-center;
+            flex-direction: row;
+            position: absolute;
+            gap: 80px;
+            margin: 0;
+            padding: 0;
+
+            .star1 {
+              position: absolute;
+              margin: 0;
+              padding: 0;
+              top: 2px;
+              left: 250px;
+              width: 100%;
+            }
+            .star2 {
+              position: absolute;
+              overflow: hidden;
+              width: 100%;
+              top: 250px;
+              right: 300px;
+            }
+          }
+
+          .circle-right {
+            overflow: hidden;
+            z-index: 0;
+            width: 452px;
+            height: 452px;
+            margin: 0;
+            padding: 0;
+            margin-right: 20px;
+            margin-top: 50px;
+          }
+          .circle-left {
+            overflow: hidden;
+            z-index: 0;
+            width: 452px;
+            height: 452px;
+            margin: 0;
+            right:100px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+          }
+        }
+        .header-down {
+          overflow: hidden;
+          @include flex-center;
+          width: 100%;
+          height: 100px;
+          .header-button {
+            overflow: hidden;
+            @include flex-center;
+            flex-direction: row;
+            gap: 30px;
+            a{
+                width: 180px;
+                height: 50px;
+                background-color: #ebf3fe;
+                text-decoration-line:none ;
+                border-radius: 6px;
+                button{
+                  color: $items-color-primary;
+                  border-radius: 6px;
+                  background-color: #ebf3fe;
+                }}
+            button {
+              cursor: pointer;
+              border: 0;
+              font-family: $font-stack;
+              @include flex-center;
+              @include font-size-bold-sm;
+              width: 180px;
+              height: 50px;
+              border-radius: 6px;
+              background-color: $items-color-primary;
+              color: $font-color-white;
+            }
+          }
+        }
+      }
+    }
+
+    ///// ------ finsh nav bar + header + main header -----////
+
+    //main scss
+    main {
+      font-family: $font-stack;
+      margin-top: 60px;
+      width: 100%;
+      @include flex-center-column;
+      overflow: hidden;
+      gap: 20px;
+      .main-slid1-phone {
+        overflow: hidden;
+        width: 100%;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+      .main-slid1-desktop {
+        display: none;
+        overflow: hidden;
+        
+        width: 100%;
+        
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+
+      ///main slid 2///
+      .main-slid2 {
+        width: 100%;
+        overflow: hidden;
+        gap: 20px;
+        @include flex-center-column;
+        .main-slid2-title {
+          @include flex-center-column;
+          gap: 10px;
+          width: 100%;
+          height: 200px;
+          margin: 0;
+          padding: 0;
+          h2 {
+            @include font-size-lighter-md-p;
+          }
+          div {
+            width: 100%;
+            height: 10px;
+            @include flex-center;
+            p {
+              @include font-size-lighter-sm-p;
+              width: 80%;
+            }
+          }
+        }
+        .main-slid2-card {
+          overflow: hidden;
+          gap: 20px;
+          margin: 0;
+          width: 100%;
+          height: 200px;
+          @include flex-center;
+          flex-wrap: wrap;
+          ///cards ///
+          .main-slid2-card {
+            box-shadow: 0 0 10px #00000008;
+            border: 1px solid#F5F6F8;
+            border-radius: 24px;
+            background-color: $primary-background-color;
+            width: 22%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            @include flex-center-column;
+            gap: 5px;
+            img {
+              width: 25px;
+              background-color: #f5fbff;
+              border-radius: 10px;
+            }
+            .main-card-text {
+              margin: 10px;
+              padding: 0;
+              @include flex-center-column;
+              h3 {
+                width: 100%;
+                font-family: $font-stack;
+                font-size: 12px;
+                font-weight: bold;
+              }
+              p {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                font-size: $font-verysmall;
+              }
+            }
+          }
+        }
+      }
+
+      ///main slid 3
+
+      .main-slid3 {
+        position: relative;
+        overflow: hidden;
+        @include flex-center;
+        width: 90%;
+        gap: 30px;
+        margin-top: 60px;
+
+        .main-slid3-text {
+          @include flex-center-column;
+          width: 60%;
+          font-family: $font-stack;
+          strong {
+            margin: 0;
+            height: 10%;
+            @include font-size-lighter-sm-p;
+          }
+          .main-slid3-image-up {
+            display: none;
+            width: 55%;
+            margin-top: 20px;
+            img {
+              display: none;
+              width: 100%;
+            }
+          }
+          p {
+            height: 10%;
+            @include font-size-lighter-sm-p;
+          }
+          h2 {
+            margin: 0;
+            width: 100%;
+            height: 50%;
+            @include font-size-bold-md-p;
+          }
+          button {
+            @include flex-center;
+            justify-content: start;
+            cursor: pointer;
+            background-color: $second-color-background;
+            height: 50px;
+            width: 80%;
+            font-family: $font-stack;
+            @include font-size-bold-md;
+            color: $items-color-primary;
+            border: none;
+            svg {
+              cursor: pointer;
+              @include font-size-bold-md;
+              height: 50%;
+              width: 30px;
+            }
+          }
+        }
+
+        .main-slid3-image-down {
+          display: flex;
+          width: 60%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      //slid4
+
+      .main-slid4 {
+        gap: 50px;
+        width: 100%;
+        height: 750px;
+        overflow: hidden;
+        @include flex-center-column;
+
+        &-title {
+          @include flex-center-column;
+          font-family: $font-stack;
+          width: 100%;
+          h2 {
+            @include font-size-bold-md-p;
+          }
+          p {
+            @include font-size-bold-sm-p;
+            margin: 0;
+            color: $font-color-gray;
+            width: 100%;
+          }
+        }
+        &-button {
+          width: 100%;
+          height: 50px;
+          @include flex-center;
+          gap: 10px;
+          button {
+            cursor: pointer;
+            @include flex-center;
+            width: 40px;
+            height: 40px;
+            border: 0.2px solid $font-color-gray-opacity;
+            border-radius: 6px;
+            background-color: $primary-background-color;
+            @include font-size-lighter-md;
+          }
+        }
+        /////-----------cars slid4---------/////
+        &-allCard {
+          position: relative;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          font-family: $font-stack;
+          @include flex-center-column;
+          flex-wrap: wrap;
+          width: 100%;
+          height: 50%;
+          gap: 5px;
+          margin: 0;
+          margin-top: 50px;
+          padding: 0;
+
+          .slid4-left {
+            position: relative;
+            @include flex-center-column;
+            flex-wrap: wrap;
+            margin: 0;
+            margin-left: 200px;
+            margin-right: 10px;
+            padding: 0;
+            gap: 20px;
+            width: 40%;
+            height: 95%;
+
+            &-card {
+              position: relative;
+              width: 75%;
+              height: 100%;
+              box-shadow: 0 0 10px #8080801e;
+              background-color: $primary-background-color;
+              gap: 10px;
+              border-radius: 16px;
+              border: 1px solid $color-border-card;
+              &-up {
+                position: relative;
+                width: 100%;
+                height: 100px;
+                margin: 0;
+                margin-right: 10px;
+                gap: 20px;
+                @include flex-center;
+                flex-wrap: wrap;
+                justify-content: start;
+                text-align: start;
+              }
+              &-about {
+                color: $font-color-gray;
+                @include flex-center-column;
+                justify-content: start;
+                text-align: start;
+                align-items: start;
+                margin: 10px;
+                @include font-size-bold-sm-p;
+                color: $font-color-gray-opacity;
+              }
+              &-txt {
+                @include flex-center-column;
+                justify-content: start;
+                align-items: start;
+                h3 {
+                  font-family: $font-stack;
+                  margin: 0;
+                  font-size: $font-verymed;
+                }
+                span {
+                  margin: 0;
+                  padding: 0;
+                  color: $font-color-gray-opacity;
+                  @include font-size-lighter-sm-p;
+                }
+              }
+            }
+          }
+        }
+    
+        // finish slid 4
+      }
+      /// finish main body-----
+    }
+    .circle-end {
+      overflow: hidden;
+      position: absolute;
+      margin-bottom: 950px;
+      left: 35%;
+      z-index: -1;
+      width: 100%;
+      height: 50%;
+    }
+  
+    //footer scss
+    footer {
+        font-family: $font-stack;
+        margin-top: 100px;
+        width: 100%;
+        @include flex-center-column;
+        margin: 0;
+        overflow: hidden;
+        .footer-title {
+          gap: 20px;
+          @include flex-center;
+          h2 {
+            @include font-size-bold-md;
+          }
+          .footer-line {
+            width: 200px;
+            height: 0;
+            border: 1px solid $footr-line;
+          }
+        }
+        //--------footer main
+        .footer-main {
+          width: 100%;
+          @include flex-center;
+          &-right-desktop{
+            display: none;
+          }
+          &-right-phone{
+            margin: 0;
+            width: 50%;
+            @include flex-center-column;
+            align-items: end;
+            strong {
+              @include font-size-lighter-sm;
+              @include flex-center;
+              justify-content: start;
+              gap: 20px;
+            }
+            address {
+              width: 70%;
+              @include font-size-lighter-sm;
+              @include flex-center;
+              justify-content: start;
+              gap: 10px;
+              p {
+                font-size: 10px;
+              }
+            }
+          }
+          /// footer main left
+  
+          &-left {
+            width: 40%;
+            height: 335px;
+            font-family: $font-stack;
+            @include flex-center-column;
+            text-align: start;
+            align-items: start;
+            h2 {
+              @include font-size-bold-md;
+            }
+            p {
+              @include flex-center;
+              justify-content: start;
+              text-align: start;
+              align-items: start;
+              width: 100%;
+              @include font-size-lighter-sm;
+            }
+            form {
+              @include flex-center;
+              width: 90%;
+            }
+            .side-email {
+              @include flex-center;
+              position: relative;
+              align-items: start;
+              justify-content: start;
+              width: 100%;
+              .button-footer {
+                position: relative;
+                height: 60px;
+                width: 100%;
+              }
+              input {
+                position: relative;
+                width: 100%;
+                height: 48px;
+                font-family: $font-stack;
+                padding: 5px 20px;
+                margin: 0;
+                border-radius: 10px;
+                border: 1px solid $footer-border;
+                @include font-size-lighter-sm;
+              }
+              button {
+                left: 10px;
+                top: 8px;
+                padding: 0;
+                margin: 0;
+                position: absolute;
+                width: 80px;
+                height: 45px;
+                font-family: $font-stack;
+                @include font-size-lighter-sm;
+                color: $font-color-white;
+                border: none;
+                border-radius: 8px;
+                background-color: $items-color-primary;
+              }
+            }
+          }
+        }
+  
+        .footer-down {
+          margin: 0;
+          margin-top: 50px;
+          width: 100%;
+          height: 80px;
+          h3 {
+            color: $font-color-gray-opacity;
+            font-family: $font-stack;
+            @include font-size-lighter-sm;
+          }
+        }
+      }
+    }
+  
+//////////////////finish page one //////////////////////
+
+  /////////////////latop 1279 ///////
+
+  @media only screen and (min-width: $size-min-laptop) and (max-width: $size-laptop) {
+    header {
+      overflow: hidden;
+      font-family: $font-stack;
+      height: 500px;
+      width: 100%;
+      margin-bottom: 50px;
+      background: linear-gradient(
+        to bottom,
+        $main-color-background,
+        $second-color-background
+      );
+
+      .nav-bar {
+        z-index: 2;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        height: 10%;
+        width: 100%;
+        background-color: $primary-background-color;
+        @include flex-center;
+
+        .nav-bar-main {
+          overflow: hidden;
+          width: 1232px;
+          height: 50%;
+          gap: 0px;
+          opacity: 0px;
+          margin: 0;
+          @include flex-center;
+
+          .nav-bar-left {
+            overflow: hidden;
+            @include font-size-lighter-sm;
+            @include flex-center;
+            cursor: pointer;
+            gap: 20px;
+
+            button {
+              cursor: pointer;
+              width: 167px;
+              height: 40px;
+              border: 0 solid;
+              border-radius: 6px;
+              font-family: $font-stack;
+              @include font-size-lighter-sm;
+              color: $font-color-white;
+              background-color: $items-color-primary;
+            }
+
+            .darkMod {
+              overflow: hidden;
+              width: 40px;
+              height: 40px;
+              @include flex-center;
+              background-color: $primary-background-color;
+              border: 1px solid $main-color-border;
+              border-radius: 6px;
+            }
+            .close {
+              transition: all 1ms ease;
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              transition: all 200ms;
+              font-size: 30px;
+              font-weight: bold;
+              text-decoration: none;
+              color: #333;
+            }
+            .darkMod-select {
+              visibility: hidden;
+              color: $font-color-black;
+              @include flex-center-column;
+
+              font-family: $font-stack;
+              gap: 10px;
+              position: absolute;
+              border-radius: 8px;
+              background-color: $primary-background-color;
+              border: 1px solid $darkMod-border;
+              margin: 0;
+              margin-top: 250px;
+              margin-left: 200px;
+              width: 250px;
+              height: 180px;
+              :last-child {
+                border: none;
+              }
+              p {
+                @include font-size-lighter-sm;
+                padding: 0;
+                margin: 0;
+                @include flex-center;
+                border-bottom: 1px solid $darkMod-border;
+                width: 80%;
+                height: 20%;
+                gap: 5px;
+                padding-bottom: 10px;
+                img {
+                  position: absolute;
+                  @include flex-center;
+                  right: 40px;
+                  margin: 0;
+                  margin-top: 5px;
+                  padding: 0;
+                  width: 22px;
+                  height: 22px;
+                }
+              }
+            }
+            .darkMod-select:target {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          .nav-bar-right {
+            overflow: hidden;
+            width: 70%;
+            gap: 20px;
+            @include flex-center;
+
+            //////
+            .menubar {
+              display: none;
+              @include font-size-bold-md-lg;
+            }
+
+            strong {
+              width: 20%;
+              @include font-size-bold-md;
+            }
+            .nav-bar-ul {
+              width: 100%;
+              height: 100%;
+              gap: 20px;
+              @include flex-center;
+              justify-content: start;
+              list-style: none;
+              font-family: $font-stack;
+              margin: 0;
+              padding: 0;
+              a {
+                @include font-size-lighter-sm;
+                color: $font-color-black;
+                width: 15%;
+                cursor: pointer;
+                text-decoration-line: none;
+              }
+              :nth-child(1) {
+                color: $items-color-primary;
+                @include font-size-lighter-sm;
+                li {
+                  position: absolute;
+                  width: 50%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+        ///finish nav bar
+      }
+      .header-main {
+        overflow: hidden;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 600px;
+        margin-top: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        .main-up {
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          width: 99%;
+          height: 100%;
+
+          .header-main-text {
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            margin: 0;
+            gap: 5px;
+            margin-top: 60px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            h2 {
+              margin: 0;
+              position: relative;
+              @include font-size-lighter-lg;
+            }
+            h1 {
+              margin: 0;
+              margin-bottom: 80px;
+              position: relative;
+              @include font-size-bold-xl;
+            }
+            .text-button {
+              overflow: hidden;
+              height: 15%;
+              width: 100%;
+              margin: 0;
+              margin-top: 300px;
+              display: flex;
+              @include flex-center;
+              position: absolute;
+
+              p {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                width: 60%;
+                @include font-size-lighter-sm;
+              }
+            }
+            .line-head {
+              position: absolute;
+              overflow: hidden;
+              display: flex;
+              flex-direction: row;
+              @include flex-center;
+              margin: 0;
+              margin-top: 210px;
+              width: 100%;
+              height: 10%;
+              img {
+                width: 350px;
+              }
+            }
+          }
+
+          .allstars {
+            overflow: hidden;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            @include flex-center;
+            flex-direction: row;
+            position: absolute;
+            gap: 60%;
+            margin: 0;
+            padding: 0;
+
+            .star1 {
+              overflow: hidden;
+
+              position: relative;
+              margin: 0;
+              padding: 0;
+              width: 5%;
+              margin-bottom: 300px;
+              i {
+                color: $items-color-primary;
+                font-size: 40px;
+              }
+            }
+            .star2 {
+              overflow: hidden;
+
+              width: 5%;
+              margin-top: 100px;
+              i {
+                color: $items-color-primary;
+                font-size: 40px;
+              }
+            }
+          }
+
+          .circle-right {
+            overflow: hidden;
+            z-index: 0;
+            width: 452px;
+            height: 452px;
+            margin: 0;
+            padding: 0;
+            margin-right: 200px;
+            margin-top: 50px;
+          }
+          .circle-left {
+            overflow: hidden;
+            z-index: 0;
+            width: 452px;
+            height: 452px;
+            margin: 0;
+            margin-left: 30px;
+            margin-top: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+          
+          }
+        }
+        .header-down {
+          overflow: hidden;
+          @include flex-center;
+          width: 100%;
+          height: 100px;
+          .header-button {
+            overflow: hidden;
+            @include flex-center;
+            flex-direction: row;
+            gap: 30px;
+            a{
+                width: 180px;
+                height: 50px;
+                background-color: #ebf3fe;
+                text-decoration-line:none ;
+                border-radius: 6px;
+                button{
+                  color: $items-color-primary;
+                  border-radius: 6px;
+                  background-color: #ebf3fe;
+                }}
+
+            button {
+              cursor: pointer;
+              border: 0;
+              font-family: $font-stack;
+              @include flex-center;
+              @include font-size-bold-sm;
+              width: 180px;
+              height: 50px;
+              border-radius: 6px;
+              background-color: $items-color-primary;
+              color: $font-color-white;
+            }
+          }
+        }
+      }
+    }
+
+    ///// ------ finsh nav bar + header + main header -----////
+
+    //main scss
+    main {
+      font-family: $font-stack;
+      margin-top: 150px;
+      width: 85%;
+      @include flex-center-column;
+      overflow: hidden;
+      gap: 50px;
+      .main-slid1-phone {
+        display: none;
+        overflow: hidden;
+
+        width: 100%;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+      .main-slid1-desktop {
+        overflow: hidden;
+
+        width: 100%;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+
+      ///main slid 2///
+      .main-slid2 {
+        overflow: hidden;
+        gap: 60px;
+        @include flex-center-column;
+        .main-slid2-title {
+          @include flex-center-column;
+          gap: 20px;
+          width: 100%;
+          height: 250px;
+          margin: 0;
+          padding: 0;
+          h2 {
+            @include font-size-lighter-lg;
+          }
+          div {
+            width: 100%;
+            height: 10px;
+            @include flex-center;
+            p {
+              @include font-size-lighter-sm;
+              width: 50%;
+            }
+          }
+        }
+        .main-slid2-card {
+          overflow: hidden;
+          gap: 20px;
+          margin: 0;
+          width: 100%;
+          height: 300px;
+          @include flex-center;
+          ///cards ///
+          .main-slid2-card {
+            box-shadow: 0 0 10px #00000008;
+            border: 1px solid #F5F6F8;
+            border-radius: 24px;
+            background-color: $primary-background-color;
+            width: 100%;
+            height: 85%;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+            @include flex-center-column;
+            gap: 5px;
+            .main-card-text {
+              margin: 0;
+              padding: 0;
+              @include flex-center-column;
+              h3 {
+                @include font-size-bold-sm;
+              }
+              p {
+                width: 80%;
+                @include font-size-lighter-sm;
+              }
+            }
+          }
+        }
+      }
+
+      ///main slid 3
+
+      .main-slid3 {
+        position: relative;
+        overflow: hidden;
+        @include flex-center;
+        width: 90%;
+        gap: 20px;
+        margin: 0;
+        margin-top: 100px;
+
+        .main-slid3-text {
+          display: flex;
+          flex-direction: column;
+          text-align: start;
+          width: 60%;
+          font-family: $font-stack;
+          strong {
+            margin: 0;
+            height: 10%;
+            @include font-size-lighter-sm;
+          }
+          p {
+            height: 10%;
+            @include font-size-lighter-sm-p;
+          }
+          h2 {
+            margin: 0;
+            width: 100%;
+            height: 50%;
+            @include font-size-bold-lg-p;
+          }
+          button {
+            @include flex-center;
+            justify-content: start;
+            cursor: pointer;
+            background-color: $second-color-background;
+            height: 50px;
+            width: 80%;
+            font-family: $font-stack;
+            @include font-size-bold-md;
+            color: $items-color-primary;
+            border: none;
+            svg {
+              cursor: pointer;
+              @include font-size-bold-md;
+              height: 50%;
+              width: 30px;
+            }
+          }
+        }
+        .main-slid3-image-up {
+          display: none;
+        }
+
+        .main-slid3-image-down {
+          width: 60%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      //slid4
+
+      .main-slid4 {
+        gap: 50px;
+        width: 100%;
+        height: 1120px;
+        overflow: hidden;
+        @include flex-center-column;
+
+        &-title {
+          @include flex-center-column;
+          font-family: $font-stack;
+          width: 100%;
+          h2 {
+            @include font-size-bold-md-p;
+          }
+          p {
+            @include font-size-bold-sm-p;
+            margin: 0;
+            color: $font-color-gray;
+            width: 50%;
+          }
+        }
+        &-button {
+          width: 100%;
+          height: 50px;
+          @include flex-center;
+          gap: 10px;
+          button {
+            cursor: pointer;
+            @include flex-center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $color-border-card;
+            border-radius: 6px;
+            background-color: $primary-background-color;
+            @include font-size-lighter-md;
+          }
+        }
+        /////-----------cars slid4---------/////
+        &-allCard {
+          overflow: hidden;
+          font-family: $font-stack;
+          @include flex-center;
+          width: 100%;
+          gap: 20px;
+          margin: 0;
+          margin-top: 50px;
+          padding: 0;
+
+          .slid4-left {
+            @include flex-center-column;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+            width: 100%;
+            height: 80%;
+            &-card {
+              background-color: $primary-background-color;
+              gap: 50px;
+              height: 70%;
+              border-radius: 16px;
+              border: 1px solid $color-border-card;
+              &-up {
+                margin: 0;
+                margin-right: 10px;
+                gap: 20px;
+                @include flex-center;
+                justify-content: start;
+                text-align: start;
+              }
+              &-about {
+                color: $font-color-gray;
+                @include flex-center;
+                justify-content: start;
+                text-align: start;
+                align-items: start;
+                margin: 10px;
+              }
+              &-txt {
+                @include flex-center-column;
+                justify-content: start;
+                align-items: start;
+                h3 {
+                  margin: 0;
+                  @include font-size-bold-md;
+                }
+                span {
+                  color: $font-color-gray;
+                  @include font-size-lighter-sm;
+                }
+              }
+            }
+          }
+          
+        }
+        .circle-end {
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 50%;
+            @include flex-center;
+            justify-content: start;
+            margin-bottom: 260px;
+          }
+        // finish slid 4
+      }
+      /// finish main body-----
+    }
+
+    //footer scss
+    .circle-end{
+    display: none;
+    }
+    footer {
+      font-family: $font-stack;
+      margin-top: 100px;
+      width: 100%;
+      @include flex-center-column;
+      margin: 0;
+      overflow: hidden;
+      .footer-title {
+        gap: 20px;
+        @include flex-center;
+        h2 {
+          @include font-size-bold-md;
+        }
+        .footer-line {
+          width: 350px;
+          height: 0;
+          border: 1px solid $footr-line;
+        }
+      }
+      //--------footer main
+      .footer-main {
+        width: 100%;
+        @include flex-center;
+        &-right-phone{
+        display: none;}
+        &-right-desktop{
+          margin: 0;
+          width: 50%;
+          @include flex-center-column;
+          align-items: end;
+          strong {
+            @include font-size-lighter-sm;
+            @include flex-center;
+            justify-content: start;
+            gap: 20px;
+          }
+          address {
+            width: 61%;
+            @include font-size-lighter-sm;
+            @include flex-center;
+            justify-content: start;
+            gap: 20px;
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+        /// footer main left
+
+        &-left {
+          width: 30%;
+          height: 335px;
+          font-family: $font-stack;
+          @include flex-center-column;
+          text-align: start;
+          align-items: start;
+          h2 {
+            @include font-size-bold-md;
+          }
+          p {
+            @include flex-center;
+            justify-content: start;
+            text-align: start;
+            align-items: start;
+            width: 100%;
+            @include font-size-lighter-sm;
+          }
+          form {
+            @include flex-center;
+            width: 95%;
+          }
+          .side-email {
+            @include flex-center;
+            position: relative;
+            align-items: start;
+            justify-content: start;
+            width: 100%;
+            .button-footer {
+              position: relative;
+              height: 60px;
+              width: 100%;
+            }
+            input {
+              position: relative;
+              width: 100%;
+              height: 48px;
+              font-family: $font-stack;
+              padding: 5px 20px;
+              margin: 0;
+              border-radius: 10px;
+              border: 1px solid $footer-border;
+              @include font-size-lighter-sm;
+            }
+            button {
+              left: 10px;
+              top: 8px;
+              padding: 0;
+              margin: 0;
+              position: absolute;
+              width: 80px;
+              height: 45px;
+              font-family: $font-stack;
+              @include font-size-lighter-sm;
+              color: $font-color-white;
+              border: none;
+              border-radius: 8px;
+              background-color: $items-color-primary;
+            }
+          }
+        }
+      }
+
+      .footer-down {
+        margin: 0;
+        margin-top: 50px;
+        width: 100%;
+        height: 80px;
+        h3 {
+          color: $font-color-gray-opacity;
+          font-family: $font-stack;
+          @include font-size-lighter-sm;
+        }
+      }
+    }
+  }
+
+
+//////////////////finish page one //////////////////////
+
+  ///////////////// largdesktop tomore///////
+  @media only screen and (min-width: $size-laptop) {
+    header {
+      overflow: hidden;
+      font-family: $font-stack;
+      height: 500px;
+      width: 100%;
+      margin-bottom: 50px;
+      background: linear-gradient(
+        to bottom,
+        $main-color-background,
+        $second-color-background
+      );
+      .nav-bar {
+        z-index: 2;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        height: 11%;
+        width: 100%;
+        @include flex-center;
+        background-color: $primary-background-color;
+
+        .nav-bar-main {
+          overflow: hidden;
+          width: 1232px;
+          height: 100%;
+          gap: 0px;
+          opacity: 0px;
+          margin: 0;
+          @include flex-center;
+
+          .nav-bar-left {
+            overflow: hidden;
+            @include font-size-lighter-sm;
+            @include flex-center;
+            cursor: pointer;
+            gap: 20px;
+
+            button {
+              cursor: pointer;
+              width: 167px;
+              height: 40px;
+              border: 0 solid;
+              border-radius: 6px;
+              font-family: $font-stack;
+              @include font-size-lighter-sm;
+              color: $font-color-white;
+              background-color: $items-color-primary;
+            }
+
+            .darkMod {
+              overflow: hidden;
+              width: 40px;
+              height: 40px;
+              @include flex-center;
+              background-color: $primary-background-color;
+              border: 1px solid $footer-border;
+              border-radius: 6px;
+            }
+            .close {
+              transition: all 1ms ease;
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              transition: all 200ms;
+              font-size: 30px;
+              font-weight: bold;
+              text-decoration: none;
+              color: #333;
+            }
+            .darkMod-select {
+              visibility: hidden;
+              color: $font-color-black;
+              @include flex-center-column;
+              align-items: start;
+              text-align: start;
+              font-family: $font-stack;
+              gap: 10px;
+              position: absolute;
+              border-radius: 8px;
+              background-color: $primary-background-color;
+              border: 1px solid $darkMod-border;
+              margin: 0;
+              margin-top: 250px;
+              margin-left: 0;
+              width: 250px;
+              height: 180px;
+              :last-child {
+                border: none;
+              }
+              p {
+                @include font-size-lighter-sm;
+                padding: 0;
+                margin: 0;
+                @include flex-center;
+                border-bottom: 1px solid $darkMod-border;
+                width: 80%;
+                height: 20%;
+                gap: 5px;
+                padding-bottom: 10px;
+                img {
+                  position: absolute;
+                  @include flex-center;
+                  right: 40px;
+                  margin: 0;
+                  margin-top: 5px;
+                  padding: 0;
+                  width: 22px;
+                  height: 22px;
+                }
+              }
+            }
+            .darkMod-select:target {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          .nav-bar-right {
+            overflow: hidden;
+            width: 80%;
+            gap: 20px;
+            @include flex-center;
+
+            //////
+            .menubar {
+              display: none;
+              @include font-size-bold-md-lg;
+            }
+            strong {
+              width: 20%;
+              @include font-size-bold-md;
+            }
+            .nav-bar-ul {
+              width: 100%;
+              height: 100%;
+              gap: 20px;
+              @include flex-center;
+              justify-content: start;
+              list-style: none;
+              font-family: $font-stack;
+              margin: 0;
+              padding: 0;
+              a {
+                @include font-size-lighter-sm;
+                color: $font-color-black;
+                width: 15%;
+                cursor: pointer;
+                text-decoration-line: none;
+              }
+              :nth-child(1) {
+                color: $items-color-primary;
+                @include font-size-lighter-sm;
+                li {
+                  position: absolute;
+                  width: 50%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+        ///finish nav bar
+      }
+      .header-main {
+        overflow: hidden;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 650px;
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        .main-up {
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          width: 99%;
+          height: 70%;
+
+          .header-main-text {
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+            height: 70%;
+            margin: 0;
+            gap: 5px;
+            margin-top: 10px;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            h2 {
+              margin: 0;
+              position: relative;
+              @include font-size-lighter-lg;
+            }
+            h1 {
+              margin: 0;
+              margin-bottom: 80px;
+              position: relative;
+              @include font-size-bold-xl;
+            }
+            .text-button {
+              overflow: hidden;
+              height: 15%;
+              width: 100%;
+              margin: 0;
+              margin-top: 350px;
+              display: flex;
+              @include flex-center;
+              position: absolute;
+
+              p {
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                width: 51%;
+                @include font-size-lighter-sm;
+              }
+            }
+            .line-head {
+              position: relative;
+              overflow: hidden;
+              display: flex;
+              flex-direction: row;
+              @include flex-center;
+              margin: 0;
+              width: 100%;
+              height: 10%;
+              bottom: 50px;
+            }
+          }
+          .allstars {
+            overflow: hidden;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            @include flex-center;
+            flex-direction: row;
+            position: absolute;
+            gap: 40%;
+            margin: 0;
+            padding: 0;
+
+            .star1 {
+              overflow: hidden;
+              position: relative;
+              margin: 0;
+              padding: 0;
+              width: 5%;
+              margin-bottom: 400px;
+            }
+            .star2 {
+              overflow: hidden;
+              width: 5%;
+              margin-top: 10px;
+              margin-right: 300px;
+            }
+          }
+          .circle-right {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 0;
+            width: 452px;
+            height: 452px;
+            margin: 0;
+            padding: 0;
+            svg{
+              width: 400px;
+              height: 400px;
+            }
+          }
+          .circle-left {
+            position: absolute;
+            left: 0;
+            top: 100px;
+            overflow: hidden;
+            z-index: 0;
+            width: 452px;
+            height: 452px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+       
+          }
+        }
+        .header-down {
+          overflow: hidden;
+          @include flex-center;
+          width: 100%;
+          height: 100px;
+          .header-button {
+            overflow: hidden;
+            @include flex-center;
+            flex-direction: row;
+            gap: 30px;
+            a{
+                width: 180px;
+                height: 50px;
+                background-color: #ebf3fe;
+                text-decoration-line:none ;
+                border-radius: 6px;
+                button{
+                  color: $items-color-primary;
+                  border-radius: 6px;
+                  background-color: #ebf3fe;
+                }
+
+            }
+            button {
+              cursor: pointer;
+              border: 0;
+              font-family: $font-stack;
+              @include flex-center;
+              @include font-size-bold-sm;
+              width: 180px;
+              height: 50px;
+              border-radius: 6px;
+              background-color: $items-color-primary;
+              color: $font-color-white;
+            }
+          }
+        }
+      }
+    }
+    ///// ------ finsh nav bar + header + main header -----////
+    //main scss
+    main {
+      font-family: $font-stack;
+      margin-top: 150px;
+      width: 85%;
+      @include flex-center-column;
+      overflow: hidden;
+      gap: 50px;
+      .main-slid1-phone {
+        display: none;
+        overflow: hidden;
+
+        width: 100%;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+      .main-slid1-desktop {
+        overflow: hidden;
+
+        width: 100%;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+      ///main slid 2///
+      .main-slid2 {
+        overflow: hidden;
+        gap: 60px;
+        width:100%;
+        @include flex-center-column;
+        .main-slid2-title {
+          @include flex-center-column;
+          gap: 20px;
+          width: 100%;
+          height: 250px;
+          margin: 0;
+          padding: 0;
+          h2 {
+            font-weight: 300;
+            font-size: 40px;
+          }
+          div {
+            width: 100%;
+            height: 10px;
+            @include flex-center;
+            p {
+              @include font-size-lighter-md;
+              font-size: 18px;
+              width: 50%;
+            }
+          }
+        }
+        .main-slid2-card {
+          overflow: hidden;
+          gap: 50px;
+          margin: 0;
+          width: 100%;
+          height: 350px;
+          @include flex-center;
+          ///cards ///
+          .main-slid2-card {
+            border: 1px solid #f5f6f8;
+            box-shadow: 0 1px 5px #f5f6f8;
+            border-radius: 24px;
+            background-color: $primary-background-color;
+            height: 300px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+            @include flex-center-column;
+            gap: 5px;
+            box-shadow: 0 0 10px #0000000D;
+            .main-card-text {
+              margin: 0;
+              padding: 0;
+              @include flex-center-column;
+              h3 {
+                padding: 10px;
+                @include font-size-bold-md;
+              }
+              p {
+                width: 80%;
+                @include font-size-lighter-sm;
+              }
+            }
+          }
+        }
+      }
+      ///main slid 3
+      .main-slid3 {
+        position: relative;
+        overflow: hidden;
+        @include flex-center;
+        margin-top: 150px;
+        width: 90%;
+        gap: 50px;
+        .main-slid3-text {
+          display: flex;
+          flex-direction: column;
+          text-align: start;
+          width: 50%;
+          font-family: $font-stack;
+          strong {
+            margin: 0;
+            height: 10%;
+            @include font-size-lighter-sm;
+          }
+          p {
+            height: 10%;
+            @include font-size-lighter-sm;
+          }
+          h2 {
+            margin: 0;
+            width: 100%;
+            height: 50%;
+            @include font-size-bold-lg;
+          }
+          button {
+            @include flex-center;
+            justify-content: start;
+            cursor: pointer;
+            background-color: $second-color-background;
+            height: 50px;
+            width: 80%;
+            font-family: $font-stack;
+            @include font-size-bold-md;
+            color: $items-color-primary;
+            border: none;
+            svg {
+              cursor: pointer;
+              @include font-size-bold-md;
+              height: 50%;
+              width: 30px;
+            }
+          }
+        }
+        .main-slid3-image-up {
+          display: none;
+        }
+
+        .main-slid3-image-down {
+          width: 60%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      //slid4
+
+      .main-slid4 {
+        gap: 50px;
+        width: 100%;
+        height: 1120px;
+        overflow: hidden;
+        @include flex-center-column;
+        &-title {
+          @include flex-center-column;
+          font-family: $font-stack;
+          width: 100%;
+          h2 {
+            @include font-size-bold-lg;
+          }
+          p {
+            margin: 0;
+            color: $font-color-gray;
+            width: 50%;
+          }
+        }
+        &-button {
+          width: 100%;
+          height: 50px;
+          @include flex-center;
+          gap: 10px;
+          button {
+            cursor: pointer;
+            @include flex-center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid $color-border-card;
+            border-radius: 6px;
+            background-color: $primary-background-color;
+            @include font-size-lighter-md;
+          }
+        }
+        /////-----------cars slid4---------/////
+        &-allCard {
+          z-index: 1;
+          overflow: hidden;
+          font-family: $font-stack;
+          @include flex-center;
+          width: 100%;
+          gap: 20px;
+          margin: 0;
+          margin-top: 50px;
+          padding: 0;
+
+          .slid4-left {
+            @include flex-center-column;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+            width: 100%;
+            &-card {
+              background-color: $primary-background-color;
+              gap: 50px;
+              border-radius: 16px;
+              border: 1px solid $color-border-card;
+              &-up {
+                margin: 0;
+                margin-right: 10px;
+                gap: 20px;
+                @include flex-center;
+                justify-content: start;
+                text-align: start;
+              }
+              &-about {
+                color: $font-color-gray;
+                @include flex-center;
+                justify-content: start;
+                text-align: start;
+                align-items: start;
+                margin: 10px;
+              }
+              &-txt {
+                @include flex-center-column;
+                justify-content: start;
+                align-items: start;
+                h3 {
+                  margin: 0;
+                  @include font-size-bold-md;
+                }
+                span {
+                  color: $font-color-gray;
+                  @include font-size-lighter-sm;
+                }
+              }
+            }
+            
+          }
+
+          
+        }
+        
+        // finish slid 4
+      }
+      
+      /// finish main body-----
+    }
+    .circle-end {
+      overflow: hidden;
+      position: absolute;
+      margin-bottom: 950px;
+      left: 35%;
+      z-index: 0;
+      width: 100%;
+      height: 50%;
+    }
+    //footer scss
+    footer {
+      font-family: $font-stack;
+      margin-top: 100px;
+      width: 100%;
+      @include flex-center-column;
+      margin: 0;
+      overflow: hidden;
+      .footer-title {
+        gap: 20px;
+        @include flex-center;
+        h2 {
+          @include font-size-bold-md;
+        }
+        .footer-line {
+          width: 350px;
+          height: 0;
+          border: 1px solid $footr-line;
+        }
+      }
+      //--------footer main
+      .footer-main {
+        width: 100%;
+        @include flex-center;
+        &-right-phone{
+        display: none;}
+        &-right-desktop {
+          margin: 0;
+          width: 50%;
+          @include flex-center-column;
+          align-items: end;
+          strong {
+            @include font-size-lighter-sm;
+            @include flex-center;
+            justify-content: start;
+            gap: 20px;
+          }
+          address {
+            width: 61%;
+            @include font-size-lighter-sm;
+            @include flex-center;
+            justify-content: start;
+            gap: 20px;
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+        /// footer main left
+
+        &-left {
+          width: 30%;
+          height: 335px;
+          font-family: $font-stack;
+          @include flex-center-column;
+          text-align: start;
+          align-items: start;
+          h2 {
+            @include font-size-bold-md;
+          }
+          p {
+            @include flex-center;
+            justify-content: start;
+            text-align: start;
+            align-items: start;
+            width: 100%;
+            @include font-size-lighter-sm;
+          }
+          form {
+            @include flex-center;
+            width: 95%;
+          }
+          .side-email {
+            @include flex-center;
+            position: relative;
+            align-items: start;
+            justify-content: start;
+            width: 100%;
+            .button-footer {
+              position: relative;
+              height: 60px;
+              width: 100%;
+            }
+            input {
+              position: relative;
+              width: 100%;
+              height: 48px;
+              font-family: $font-stack;
+              padding: 5px 20px;
+              margin: 0;
+              border-radius: 10px;
+              border: 1px solid $footer-border;
+              @include font-size-lighter-sm;
+            }
+            button {
+              left: 10px;
+              top: 8px;
+              padding: 0;
+              margin: 0;
+              position: absolute;
+              width: 80px;
+              height: 45px;
+              font-family: $font-stack;
+              @include font-size-lighter-sm;
+              color: $font-color-white;
+              border: none;
+              border-radius: 8px;
+              background-color: $items-color-primary;
+            }
+          }
+        }
+      }
+
+      .footer-down {
+        margin: 0;
+        margin-top: 50px;
+        width: 100%;
+        height: 80px;
+        h3 {
+          color: $font-color-gray-opacity;
+          font-family: $font-stack;
+          @include font-size-lighter-sm;
+        }
+      }
+    }
+  }
+}
+
+//////////////////finish page one //////////////////////
