@@ -9,4 +9,59 @@ body{
 
 :root{
     --buton-color:red;
+    
+}
+
+
+
+.borderhigh{
+    width: 1.3%;
+    height:90%;
+    background-color: #FF5F37;
+}
+.high{
+  background-color: #FFE2DB;  
+  width: 50px;
+  color: #FF5F37;
+  font-size: 12px;
+}
+.bordermidel{
+    background-color: #FFAF37;
+}
+.midel{
+    background-color:#FFE2DB;  
+  width: 50px;
+  color: #FFAF37;
+  font-size: 12px;
+}
+.borderlower{
+    background-color: #11A483;
+}
+.lower{
+    background-color:#C3FFF1;  
+    width: 50px;
+    color: #11A483;
+    font-size: 12px;
+
+}
+
+.mystyle{
+
+text-decoration: line-through;
+}
+
+
+.checkboxuser{
+    width: 7%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content:center;
+}
+.inputUser{
+    // d-flex flex-row h-75 w-50"
+    display: flex ;
+    flex-direction: row;
+    height: 70%;
+    width: 50%;
 }
