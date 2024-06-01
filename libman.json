@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "defaultProvider": "filesystem",
+  "libraries": [
+    {
+      "provider": "filesystem",
+      "library": "node_modules/bootstrap/dist/",
+      "destination": "dist/lib/bootstrap/dist/",
+      "files": [
+        "js/bootstrap.bundle.min.js"
+      ]
+    }
+  ]
+}
+
