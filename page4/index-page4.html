@@ -244,31 +244,45 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog d-flex">
                                 <div class="modal-content">
-                                  <div class="modal-body">
+                                  <div class="modal-body todocreation">
                                     <form>
+                                        
                                         <h4>تسک جدید</h4>
-                                      <div class="mb-3">
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="نام تسک">
+                                      <div class="mb-3 ">
+                                        <input type="text" class="form-control" id="recipient-name" name="todo-title" placeholder="نام تسک">
                                       </div>
                                       <div class="mb-3">
-                                        <textarea class="form-control" id="message-text" placeholder="توضیحات"></textarea>
+                                        <textarea class="form-control" id="message-text" name="todo-desk"  placeholder="توضیحات"></textarea>
                                       </div>
                                     </form>
-
-
-                                    <div>
-                                        <button class="btn btn-secondary dropdown-toggle"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            تگ ها</button>
-                                        <div class="dropdown-menu" style="width: 100px;height:100px">
-                                          <a class="dropdown-item" href="#">بالا</a>
-                                          <a class="dropdown-item" href="#">متوسط</a>
-                                          <a class="dropdown-item" href="#">پایین</a>
+                                    <div class="alltags">
+                                        <button class="select-btn-priority">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M3.51661 2.58331H13.0499C13.6166 2.58331 14.325 2.97498 14.625 3.45831L18.1083 9.02498C18.4416 9.56665 18.4083 10.4166 18.025 10.925L13.7083 16.675C13.4 17.0833 12.7333 17.4166 12.225 17.4166H3.51661C2.05828 17.4166 1.17498 15.8166 1.94165 14.575L4.24995 10.8833C4.55828 10.3916 4.55828 9.59165 4.24995 9.09998L1.94165 5.40831C1.17498 4.18331 2.06661 2.58331 3.51661 2.58331Z" stroke="#AFAEB2" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>تگ ها </span>
+                                        </button>
+                                    
+                                        <div  class="all-priority">
+                                       
+                                            <span>
+                                                <label class="high rounded-3 d-flex justify-content-center align-items-center" for="high-priority">بالا</label>
+                                              <input type="radio" name="priority" id="high-priority">
+                                            </span>
+                                            <span>
+                                                <label class="midel rounded-3 d-flex justify-content-center align-items-center" for="mid-priority">متوسط</label>
+                                              <input type="radio"   name="priority" id="mid-priority">
+                                            </span>
+                                            <span>
+                                                <label class="lower rounded-3 d-flex justify-content-center align-items-center" for="low-priority">پایین</label>
+                                                <input type="radio"name="priority" id="low-priority">
+                                            </span>
                                         </div>
-                                      </div>                                  
+                                    </div>
                                     </div>
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
-                                    <button type="button" class="btn btn-primary" onclick="getvalueuser()">اضافه کردن تسک</button>
+                                    <button type="button" class="btn btn-primary creat-btn">اضافه کردن تسک</button>
                                   </div>
                                 </div>
                               </div>
@@ -277,10 +291,10 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
                         </div>    
                 </div>
             </div>
-            <div id="todolistall"  class="groupcard overflow-auto" style="width: 60%;height:40%">
+            <div  class="groupcard overflow-auto" style="width: 60%;height:40%">
                     <div  class="card bg-body-tertiary w-100 d-flex flex-row justify-content-start align-items-center" style="height: 33%;">
                         <div class="borderhigh border rounded-start-5 flex-row"></div>
-                        <div class="checkboxuser"><input class="inputUser" type="checkbox">
+                        <div class="checkboxuser"><input class="inputUser"  type="checkbox">
                         </div>
                         <div class=" w-75 h-100 d-flex flex-column justify-content-start align-items-start pt-3" >
                             <div class=" fw-bold fs-6 w-100 h-45 d-flex justify-content-start">جلسه با مدیران پروژه
@@ -298,7 +312,7 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
                         </div>
 
                     </div>
-                    <div class="card bg-body-tertiary w-100 d-flex flex-row justify-content-start align-items-center" style="height: 33%;">
+                    <div  class="card bg-body-tertiary w-100 d-flex flex-row justify-content-start align-items-center" style="height: 33%;">
                         <div class="bordermidel border rounded-start-5 flex-row" style="width: 1.3%;height:90%;"></div>
                         <div class=" d-flex align-items-start justify-content-center h-100 " style="width: 7%;">
                             <input class=" d-flex flex-row h-75 w-50" type="checkbox"></div>
@@ -448,7 +462,7 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
 
 </body>
 
-<script src="index.js" defer></script>
+<script src="./script.js" defer></script>
 
 </html>
 

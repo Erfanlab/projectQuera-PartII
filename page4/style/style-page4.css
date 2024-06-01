@@ -59,4 +59,49 @@ body {
   flex-direction: row;
   height: 70%;
   width: 50%;
+}
+
+.all-priority {
+  display: none;
+  width: 50%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.select-btn-priority {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border: 1px solid #E9E9E9;
+  border-radius: 6px;
+  width: 90px;
+  height: 32px;
+  box-shadow: 0 0 5px #E9E9E9;
+  transition: all ease-in 1s;
+}
+
+.all-priority input {
+  display: none;
+}
+
+.alltags {
+  transition: all ease-in 1s;
+  width: 100%;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+}
+
+.alltags button {
+  display: flex;
+  gap: 10px;
+}
+
+.rotate-180 {
+  transform: rotate(90deg);
 }/*# sourceMappingURL=style-page4.css.map */
