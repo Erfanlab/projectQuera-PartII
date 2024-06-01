@@ -15,6 +15,8 @@
         } else {
             htmlElement.setAttribute('data-bs-theme', 'light');
             localStorage.setItem('bsTheme', 'light');
+        
+        
         }
     });
 });
