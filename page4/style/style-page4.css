@@ -137,9 +137,10 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: end;
-  width: 20%;
-  height: 100%;
+  align-items: start;
+  width: 15%;
+  height: 70%;
+  cursor: pointer;
 }
 
 .svgButtoms {
@@ -160,7 +161,7 @@ body {
   gap: 1px;
   width: 70px;
   height: 30px;
-  bottom: 0;
+  bottom: -20;
 }
 .btnMore .btnremove {
   border: 0;

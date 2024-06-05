@@ -142,10 +142,13 @@ text-decoration: line-through;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: end;
-    width: 20%;
-    height: 100%;
+    align-items: start;
+    width: 15%;
+    height: 70%;
+    cursor: pointer;
 }
+
+
 .svgButtoms{
     height:75%;
     width: 50%;; 
@@ -162,7 +165,8 @@ text-decoration: line-through;
     gap: 1px;
     width: 70px;
     height: 30px;
-    bottom: 0;
+    bottom: -20;
+
 .btnremove{
     border: 0;
     border-radius: 6px;

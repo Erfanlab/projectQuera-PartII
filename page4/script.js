@@ -66,7 +66,11 @@ function resetAll(){
     for(let i =0 ; i<userTodopriority.length;i++){
             userTodopriority[i].checked = false;
         };
-        alert("fail")
+        alert('تمام ورودی های کاربر حذف شدن')
+        selectbtnprioritysvg.classList.remove("rotate-180");
+        allpriority.style.display ="none";
+        userTododesc.value='';
+        userTodotitle.value='';
         }
 
 
@@ -92,6 +96,15 @@ function selectpriority(){
         alert("الویتی انتخاب نکردید !");
         return "";
     };
+    function inputUserTodoTitel(){
+
+            if (userTodotitle.value){   
+            return userTodotitle.value;            
+        
+    };
+    alert("الویتی انتخاب نکردید !");
+    return "";
+};
 
 ///  دکمه انتخاب اصلی 
 actionBtn.addEventListener("click",creattodo);
@@ -102,17 +115,13 @@ const inprogrestodos=[];
 function creattodo(){
     const numbertodos=toString(inprogrestodos.length);
 
-    function checkvaluetitle(){
     if (userTodotitle.value === ''){
         alert("خطا! هیچ عنوان تسکی انتخاب نشده است.")
-}
-return userTodotitle.value;
-}
-
-
-
+      
+return '';
+}else{
     const inprogrestodo = {
-        title:checkvaluetitle(),
+        title:inputUserTodoTitel(),
         desc:userTododesc.value,
         priority:selectpriority(),
         lengths:numbertodos,
@@ -121,8 +130,7 @@ return userTodotitle.value;
     inprogrestodos.push(inprogrestodo);
     localStorage.setItem("inprogrestodos",JSON.stringify(inprogrestodos));
     ////    شمارش تعداد تسک های امروز
-console.log(inprogrestodo);
-};
+}};
 
 const farsiHighpriority="بالا"
 const farsiMidpriority="متوسط"
@@ -230,8 +238,9 @@ console.log(btnMore);
 selectmore.addEventListener("click", () => {
 
     if (btnMore.classList.contains("d-none")) {
-        btnMore.classList.remove("d-flex");
-        
+        btnMore.classList.remove("d-none");
+        btnMore.classList.add("d-flex");
+
     }else{
         btnMore.classList.add("d-none");
     }
@@ -242,11 +251,11 @@ selectmore.addEventListener("click", () => {
 
 
 
-/// not add 
+/////not add 
 /////1.09 
 
 
-////  این درسته 
+/////این درسته 
 
 ///////   حذف کردن تسک های انجام شده 
 function myFunctionhigh() {
