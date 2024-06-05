@@ -8,7 +8,12 @@
   margin: 0;
 }
 // header scss
-
+.btnOpenApp{
+  background-color: $items-color-primary;
+}
+.linkopenApp{
+  text-decoration: none;
+}
 body {
   @include flex-center-column;
   padding: 0;
@@ -351,7 +356,7 @@ body {
                 background-color: #ebf3fe;
                 text-decoration-line:none ;
                 border-radius: 6px;
-                button{
+                .btnOpenAbout{
                   color: $items-color-primary;
                   border-radius: 6px;
                   background-color: #ebf3fe;
@@ -1166,7 +1171,7 @@ body {
                 background-color: #ebf3fe;
                 text-decoration-line:none ;
                 border-radius: 6px;
-                button{
+                .btnOpenAbout{
                   color: $items-color-primary;
                   border-radius: 6px;
                   background-color: #ebf3fe;
@@ -1943,7 +1948,7 @@ body {
                 background-color: #ebf3fe;
                 text-decoration-line:none ;
                 border-radius: 6px;
-                button{
+                .btnOpenAbout {
                   color: $items-color-primary;
                   border-radius: 6px;
                   background-color: #ebf3fe;
@@ -2681,7 +2686,7 @@ body {
                 background-color: #ebf3fe;
                 text-decoration-line:none ;
                 border-radius: 6px;
-                button{
+                .btnOpenAbout{
                   color: $items-color-primary;
                   border-radius: 6px;
                   background-color: #ebf3fe;

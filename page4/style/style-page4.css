@@ -7,10 +7,34 @@ body {
   --buton-color:red;
 }
 
-.borderhigh {
-  width: 1.3%;
-  height: 90%;
+.himan {
+  width: 100%;
   background-color: #FF5F37;
+}
+
+.groupcard {
+  width: 60%;
+  height: 40%;
+  overflow: auto;
+}
+
+.cardin {
+  height: 33%;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 1px solid rgba(158, 158, 158, 0.378);
+  border-radius: 6px;
+}
+
+.borderhigh {
+  width: 1.2%;
+  height: 90%;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: row;
+  background-color: #e63b10;
 }
 
 .high {
@@ -18,9 +42,18 @@ body {
   width: 50px;
   color: #FF5F37;
   font-size: 12px;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
 }
 
 .bordermidel {
+  width: 1.2%;
+  height: 90%;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: row;
   background-color: #FFAF37;
 }
 
@@ -29,9 +62,18 @@ body {
   width: 50px;
   color: #FFAF37;
   font-size: 12px;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
 }
 
 .borderlower {
+  width: 1.2%;
+  height: 90%;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: row;
   background-color: #11A483;
 }
 
@@ -40,13 +82,17 @@ body {
   width: 50px;
   color: #11A483;
   font-size: 12px;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
 }
 
 .mystyle {
   text-decoration: line-through;
 }
 
-.checkboxuser {
+.checkboxs {
   width: 7%;
   height: 100%;
   display: flex;
@@ -54,11 +100,95 @@ body {
   justify-content: center;
 }
 
-.inputUser {
+.checkboxcard {
+  height: 75%;
+  width: 50%;
   display: flex;
   flex-direction: row;
-  height: 70%;
+}
+
+.inputtextuser {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding-top: 8px;
+}
+
+.titleuser {
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  justify-content: start;
+}
+
+.noteuser {
+  font-weight: lighter;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.buttomMore {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 20%;
+  height: 100%;
+}
+
+.svgButtoms {
+  height: 75%;
   width: 50%;
+}
+
+.svgButtom {
+  width: 100%;
+  height: 50%;
+}
+
+.btnMore {
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  gap: 1px;
+  width: 70px;
+  height: 30px;
+  bottom: 0;
+}
+.btnMore .btnremove {
+  border: 0;
+  border-radius: 6px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease-in-out;
+}
+.btnMore .btnremove:hover {
+  transition: all 200ms ease-in-out;
+  background-color: white;
+}
+.btnMore .btnrename {
+  height: 100%;
+  border: 0;
+  border-radius: 6px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease-in-out;
+}
+.btnMore .btnrename:hover {
+  transition: all 200ms ease-in-out;
+  background-color: white;
 }
 
 .all-priority {

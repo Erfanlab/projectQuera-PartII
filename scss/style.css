@@ -25,6 +25,14 @@
   margin: 0;
 }
 
+.btnOpenApp {
+  background-color: #2b7ef8;
+}
+
+.linkopenApp {
+  text-decoration: none;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -412,7 +420,7 @@ body {
     text-decoration-line: none;
     border-radius: 6px;
   }
-  body header .header-main .header-down .header-button a button {
+  body header .header-main .header-down .header-button a .btnOpenAbout {
     color: #2b7ef8;
     border-radius: 6px;
     background-color: #ebf3fe;
@@ -1391,7 +1399,7 @@ body {
     text-decoration-line: none;
     border-radius: 6px;
   }
-  body header .header-main .header-down .header-button a button {
+  body header .header-main .header-down .header-button a .btnOpenAbout {
     color: #2b7ef8;
     border-radius: 6px;
     background-color: #ebf3fe;
@@ -2318,7 +2326,7 @@ body {
     text-decoration-line: none;
     border-radius: 6px;
   }
-  body header .header-main .header-down .header-button a button {
+  body header .header-main .header-down .header-button a .btnOpenAbout {
     color: #2b7ef8;
     border-radius: 6px;
     background-color: #ebf3fe;
@@ -3214,7 +3222,7 @@ body {
     text-decoration-line: none;
     border-radius: 6px;
   }
-  body header .header-main .header-down .header-button a button {
+  body header .header-main .header-down .header-button a .btnOpenAbout {
     color: #2b7ef8;
     border-radius: 6px;
     background-color: #ebf3fe;
