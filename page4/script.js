@@ -110,36 +110,8 @@ function selectpriority(){
 actionBtn.addEventListener("click",creattodo);
 actionBtnclose.addEventListener("click",resetAll);
 ///////
-const inprogrestodos=[];
 
-function creattodo(){
-    const numbertodos=toString(inprogrestodos.length);
-
-    if (userTodotitle.value === ''){
-        alert("خطا! هیچ عنوان تسکی انتخاب نشده است.")
-      
-return '';
-}else{
-    const inprogrestodo = {
-        title:inputUserTodoTitel(),
-        desc:userTododesc.value,
-        priority:selectpriority(),
-        lengths:numbertodos,
-    };
-
-    inprogrestodos.push(inprogrestodo);
-    localStorage.setItem("inprogrestodos",JSON.stringify(inprogrestodos));
-    ////    شمارش تعداد تسک های امروز
-}};
-
-const farsiHighpriority="بالا"
-const farsiMidpriority="متوسط"
-const farsiLowpriority="پایین"
-
-document.addEventListener("DOMContentLoaded",()=>{
-    const inprogrestodoinlocalstorag =JSON.parse(localStorage.getItem("inprogrestodos"));
-
-    inprogrestodoinlocalstorag.forEach((ToDo)=> {  
+function generatTodoprogress(ToDo){
         if (ToDo.priority === "high-priority"){
             const todowrapper = document.createElement("div");
        todowrapper.innerHTML =
@@ -223,7 +195,57 @@ document.addEventListener("DOMContentLoaded",()=>{
 
        }
        
+    };
+
+
+
+
+const inprogrestodos=[];
+
+function creattodo(){
+    const numbertodos=toString(inprogrestodos.length);
+
+    if (userTodotitle.value === ''){
+        alert("خطا! هیچ عنوان تسکی انتخاب نشده است.")
+      
+return '';
+}else{
+    const inprogrestodo = {
+        title:inputUserTodoTitel(),
+        desc:userTododesc.value,
+        priority:selectpriority(),
+        lengths:numbertodos,
+    };
+ if (localStorage.getItem("inprogrestodos") === null){
+    inprogrestodos.unshift(inprogrestodo);
+    localStorage.setItem("inprogrestodos", JSON.stringify(inprogrestodos));
+    generatTodoprogress(inprogrestodo);
+
+}else{
+
+    const previousInproggresToDo =JSON.parse(localStorage.getItem("inprogrestodos"));
+    previousInproggresToDo.unshift(inprogrestodo);
+    localStorage.setItem("inprogrestodos",JSON.stringify(previousInproggresToDo));
+    generatTodoprogress(inprogrestodo);
+}
+}};
+////    شمارش تعداد تسک های امروز
+
+const farsiHighpriority="بالا"
+const farsiMidpriority="متوسط"
+const farsiLowpriority="پایین"
+
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+    const inprogrestodoinlocalstorag =JSON.parse(localStorage.getItem("inprogrestodos"));
+
+
+    inprogrestodoinlocalstorag.forEach((ToDos)=> {  
+    generatTodoprogress(ToDos);
+
     });
+
     
     // console.log(JSON.parse(inprogrestodoinlocalstorag));
 
