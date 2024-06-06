@@ -21,9 +21,20 @@ body{
     background-color: #FF5F37;
 }
 .groupcard{
+    background-image: url(./image/nottodolist.png);
+    background-repeat: no-repeat;
+    background-size:250px ;
+    background-position: center;
     width: 60%;
     height:40%;
     overflow:auto;
+}
+.pointMore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 50px;
 }
 .cardin{
 height: 33%;
@@ -50,6 +61,7 @@ border-radius: 6px;
   font-size: 12px;
   display: flex;
   border-radius: 6px;
+  margin-right: 20px;
   align-items: center;
   justify-content: center;
 }
@@ -68,6 +80,7 @@ border-radius: 6px;
   font-size: 12px;
   display: flex;
   border-radius: 6px;
+  margin-right: 20px;
   align-items: center;
   justify-content: center;
 }
@@ -86,13 +99,13 @@ border-radius: 6px;
     font-size: 12px;
     display: flex;
     border-radius: 6px;
+    margin-right: 20px;
     align-items: center;
     justify-content: center;
 }
 
 
 .mystyle{
-
 text-decoration: line-through;
 }
 .checkboxs{
@@ -176,14 +189,10 @@ text-decoration: line-through;
     justify-content: center;
     align-items: center;
     transition: all 200ms ease-in-out;
-
-  
 }
-
 .btnremove:hover{
     transition: all 200ms ease-in-out;
     background-color: white;
-
 }
 .btnrename{
     height: 100%;
@@ -200,34 +209,20 @@ text-decoration: line-through;
     transition: all 200ms ease-in-out;
     background-color: white;
 
+};
 }
-
-}
-
-
 .all-priority {
-    
     display: none;
     width: 50%;
     height: 50px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap:5px;
     border-radius: 10px;
+    transition: all 1s ease-in-out;
 
 }
-
-// .all-priority span{
-//     border-radius: 5px;
-//     color: white;
-//     display: flex;
-//     padding: 0.25rem;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: #11A483;
-//     text-align: center;
-// }
 .select-btn-priority{
     display: flex;
     justify-content: center;
@@ -238,25 +233,38 @@ text-decoration: line-through;
     width: 90px;
     height: 32px;
     box-shadow: 0 0 5px #E9E9E9;
-    transition: all ease-in 1s;
 }
-
 .all-priority input{
  display: none;
 }
 .alltags{
-    transition: all ease-in 1s;
-
     width:100%;
     justify-content: start;
     align-items: start;
     text-align: start;
 }
 .alltags button{
+
     display: flex;
     gap: 10px;
 }
-
 .rotate-180{
+    transition: all 300ms ease-in-out;
     transform: rotate(90deg);
+}
+.select-btn-priority svg{
+    transition: all 300ms ease-in-out;
+}
+.lihome{
+    cursor: pointer;    
+    
+    };
+.lihome:hover{
+    background-color: #1237674d;
+    transition: all 300ms ease-in-out;
+}
+.lihomeSelectd{
+    cursor: pointer;
+    background-color: #1237674d;
+
 }

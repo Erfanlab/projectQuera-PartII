@@ -111,7 +111,7 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
 
 <body class=" w-100">
     <main class="w-100 h-100 m-0 d-flex flex-row align-items-center overflow-hidden">
-        <div class="  bg-body-tertiary overflow-hidden rounded-5 shadow"  style="width:25%; height: 95%;">
+        <div class="  bg-body-tertiary d-flex flex-column flex-shrink-0 overflow-hidden rounded-5 shadow "  style="width:25%; height: 95%;">
 <!-- ----------------profile name and image------- -->
             <div class=" w-10 h-10 pe-4 mt-5 d-flex flex-row overflow-hidden">
                 <div class=" w-25 h-100">
@@ -124,49 +124,49 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
             </div>
 <!-- ------------------menu right slid----------- -->
             <div class=" mt-5 bg-body-tertiary d-flex flex-column gap-1 w-100 overflow-auto " style="height:40%;">
-                <div class=" m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
+                <div class="lihomeSelectd m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
                     <svg class=" h-50 " style="width: 20%;height:50%">
                     <use href="#iconome">
                     </use>
                     </svg>
                     <div>خانه</div>
                 </div>
-                <div class=" m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
+                <div class="lihome m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
                     <svg class=" h-50 " style="width: 20%;height:50%">
                         <use href="#icontask">
                     </use>
                     </svg>
                     <div>تسک ها</div>
                 </div>
-                <div class=" m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
+                <div class="lihome m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
                     <svg class=" h-50 " style="width: 20%;height:50%">
                     <use href="#icondate">
                     </use>
                     </svg>
                     <div>تقویم</div>
                 </div>
-                <div class=" m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; ">
+                <div class="lihome m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; ">
                     <svg class=" h-50 " style="width: 20%;height:50%">
                     <use href="#iconfile">
                     </use>
                     </svg>
                     <div>گزارشات</div>
                 </div>
-                <div class=" m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
+                <div class="lihome m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
                     <svg class=" h-50 " style="width: 20%;height:50%">
                     <use href="#iconsetting">
                     </use>
                     </svg>
                     <div>تنظیمات</div>
                 </div>
-                <div class=" m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
+                <div class="lihome m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
                     <svg class=" h-50 " style="width: 20%;height:50%">
                     <use href="#iconsuport">
                     </use>
                     </svg>
                     <div>پشتیبانی</div>
                 </div>
-                <div class=" m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
+                <div class="lihome m-0 d-flex flex-row text-center align-items-center gap-2" style="height: 50px; width:100%; " >
                     <svg class=" h-50 " style="width: 20%;height:50%">
                     <use href="#iconprofile">
                     </use>
@@ -238,30 +238,29 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
             </p>
             </div>
             </div>
-            <div class="d-flex align-items-center text-primary  justify-content-center px-5" style="width: 70%; height:80px;">
-                <div class=" border-1 rounded border-dark w-100 h-50 d-flex align-items-center" style="border: dashed; font-size:12px; ">
-                <div class=" m-0 d-flex flex-row text-center justify-content-center" style="height: 100%; width:20%; " >
-                    <svg class="d-flex justify-content-start align-items-center text-center my-2" style="width: 30%;height:50%">
+            <div class="d-flex align-items-center text-primary   justify-content-center px-5" style="width: 70%; height:80px;">
+                <div class=" bg-body-tertiary border-1 rounded border-secondary-subtle w-100 h-50 d-flex align-items-center" style="border: dashed; font-size:12px; ">
+                <div class="p-0 m-0 d-flex flex-row text-center justify-content-center" style="height: 100%; width:20%; " >
+                    <svg class="d-flex justify-content-start align-items-center text-center my-2" style="width: 20%;height:50%">
                     <use href="#iconplus">
                     </use>
                     </svg>
                 </div>
-                    <div class="h-100 w-10 m-0 p-0"> 
-                            <button class=" btn p-0 m-0 w-100 h-100 bg-body bg-white d-flex align-items-center border-0 text-primary btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap" style="font-size:12px;" >افزودن وظیفه جدید</button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog d-flex">
-                                <div class="modal-content">
-                                  <div class="modal-body todocreation">
+                    <div class="h-100 w-25 m-0 p-0"> 
+                            <button class="btnNewTask bg-body-tertiary p-0 m-0 w-100 h-100 bg-body d-flex align-items-center border-0 text-primary btn btn-primary" style="font-size:12px;" >افزودن وظیفه جدید</button>
+                        <div class="listNewTask d-none justify-content-start align-items-start position-relative bg-body-tertiary mt-3 z-3 rounded-5" style="width: 560px;left:120;">
+                            <div class="w-100 bg-body-tertiary d-flex z-2 rounded-2 border border-1 border-body">
+                                <div class="d-flex flex-column justify-content-center align-items-center bg-body-tertiary z-2 rounded-3 w-100">
+                                  <div class="todocreation rounded-4 bg-body-tertiary z-2" style="width: 90%;">
                                     <form>
-                                        <h4>تسک جدید</h4>
-                                      <div class="mb-3">
-                                        <input type="text" class="form-control" id="recipient-name" name="todo-title" placeholder="نام تسک">
+                                      <div class="d-flex flex-column align-items-start mb-3 z-2 rounded-5 w-100">
+                                        <input  type="text" class="form-control z-2 w-100 mt-2" id="recipient-name" name="todo-title" placeholder="نام تسک">
                                       </div>
-                                      <div class="mb-3">
+                                      <div class="mb-3 z-2">
                                         <textarea class="form-control" id="message-text" name="todo-desk"  placeholder="توضیحات"></textarea>
                                       </div>
                                     </form>
-                                    <div class="alltags">
+                                    <div class="alltags z-2">
                                         <button class="select-btn-priority">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path d="M3.51661 2.58331H13.0499C13.6166 2.58331 14.325 2.97498 14.625 3.45831L18.1083 9.02498C18.4416 9.56665 18.4083 10.4166 18.025 10.925L13.7083 16.675C13.4 17.0833 12.7333 17.4166 12.225 17.4166H3.51661C2.05828 17.4166 1.17498 15.8166 1.94165 14.575L4.24995 10.8833C4.55828 10.3916 4.55828 9.59165 4.24995 9.09998L1.94165 5.40831C1.17498 4.18331 2.06661 2.58331 3.51661 2.58331Z" stroke="#AFAEB2" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -286,8 +285,7 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
                                         </div>
                                     </div>
                                     </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary close-btn" data-bs-dismiss="modal">بستن</button>
+                                  <div class="modal-footer w-100 mb-3 ms-5 d-flex gap-3">
                                     <button type="button" class="btn btn-primary creat-btn">اضافه کردن تسک</button>
                                   </div>
                                 </div>
@@ -298,104 +296,27 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
                 </div>
             </div>
             <div  class="groupcard">
-                <div>
-                    <div class="cardin bg-body-tertiary">
-                        <div class="borderhigh"></div>
-                        <div class="checkboxs"><input class="checkboxcard"  type="checkbox">
-                        </div>
-                        <div class="inputtextuser" >
-                            <div class="titleuser">جلسه با مدیران پروژه
-                                <span class="high">بالا</span>
-                            </div> 
-                            <div class="noteuser" >جلسه با محسن یگانه و مریم جلالی</div>
-                        </div>
-                        <div class="buttomMore" >
-                            <svg class="svgButtoms">
-                                <use class="svgButtom" href="#iconmore">
-
-                                </use>
-                            </svg>
-                            <div class="btnMore d-none btn-group bg-body-secondary">
-                                <button class="btnremove btn-info">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 18 20" fill="none">
-                                    <path d="M1 5H17M2 5L3 17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H13C13.5304 19 14.0391 18.7893 14.4142 18.4142C14.7893 18.0391 15 17.5304 15 17L16 5M6 5V2C6 1.73478 6.10536 1.48043 6.29289 1.29289C6.48043 1.10536 6.73478 1 7 1H11C11.2652 1 11.5196 1.10536 11.7071 1.29289C11.8946 1.48043 12 1.73478 12 2V5M7 10L11 14M11 10L7 14" stroke="#5C5F61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                                <hr class=" border h-75 border-black m-0" style="width: 1px;">
-                                    <button class="btnrename btn-light">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M7 7H6C5.46957 7 4.96086 7.21071 4.58579 7.58579C4.21071 7.96086 4 8.46957 4 9V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H15C15.5304 20 16.0391 19.7893 16.4142 19.4142C16.7893 19.0391 17 18.5304 17 18V17" stroke="#5C5F61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M16 4.99998L19 7.99998M20.385 6.58499C20.7788 6.19114 21.0001 5.65697 21.0001 5.09998C21.0001 4.543 20.7788 4.00883 20.385 3.61498C19.9912 3.22114 19.457 2.99988 18.9 2.99988C18.343 2.99988 17.8088 3.22114 17.415 3.61498L9 12V15H12L20.385 6.58499Z" stroke="#5C5F61" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div>
-                    <div  class="cardin bg-body-tertiary">
-                        <div class="bordermidel"></div>
-                        <div class="checkboxs">
-                            <input class="checkboxcard" type="checkbox"></div>
-                        <div class="inputtextuser" >
-                            <div class="titleuser">خرید میوه و سبزیجات ولبنیات برای خانه
-                                <span class="midel">متوسط</span>
-                            </div> 
-                            <div class="noteuser">جلسه با محسن یگانه و مریم جلالی</div>
-                        </div>
-                        <div class="buttomMore">
-                            <svg class="svgButtoms">
-                                <use class="svgButtom" href="#iconmore">
-
-                                </use>
-                            </svg>
-
-                        </div>
-
-                    </div>
-                </div>
-                <div>
-                    <div class="cardin bg-body-tertiary">
-                        <div class="borderlower"></div>
-                        <div class="checkboxs">
-                            <input class="checkboxcard" type="checkbox">
-                        </div>
-                        <div class="inputtextuser" >
-                            <div class="titleuser">تماس با جمشید
-                                <span class="lower">پایین</span>
-                            </div> 
-                            <div class="noteuser">باید در مورد کارهای باقی مانده در پروژه قبلی صحبت کنیم</div>
-                        </div>
-                        <div class="buttomMore">
-                            <svg class="svgButtoms">
-                                <use class="svgButtom" href="#iconmore">
-
-                                </use>
-                            </svg>
-
-                        </div>
-
-                    </div>
-                </div>
+              
+  
+          
                     
            
             </div>
-            <div class=" w-50 d-flex flex-column justify-content-center align-items-start pt-5" style="height: 80px;">
-                <div><span class=" h5">تسک های انجام شده</span>
+            <div class=" mb-1 w-50 d-flex flex-column justify-content-center align-items-start pt-3" style="height: 80px;">
+                <div><span class="m-0 fs-6 fw-bold">تسک های انجام شده</span>
                 </div>
-                <div><span style="font-size: 12px;">3 تسک باید اجام دهید</span>
+                <div><span class="m-0" style="font-size: 12px;">3 تسک باید اجام دهید</span>
                 </div>
                 </div>
          
-                <div class="groupcard  overflow-auto" style="width: 60%;height:35%">
+                <div class="groupcard  overflow-auto" style="width: 60%;height:30%">
                         <div id="cardHigh"
                         class="card bg-body-tertiary w-100 d-flex flex-row justify-content-start align-items-center" style="height: 30%;">
                             <div class="borderhigh border rounded-start-5 flex-row" style="width: 1.3%;height:90%;"></div>
                             <div class=" d-flex align-items-start justify-content-center h-100 " style="width: 7%;">
                                 <input class=" d-flex flex-row h-100 w-50" type="checkbox" onclick="myFunctionhigh()"></div>
                             <div class=" w-75 h-100 d-flex flex-column justify-content-start align-items-start pt-3" >
-                                <div id="textMoreHigh"  class=" fw-bold fs-6 w-100 h-45 d-flex justify-content-start">جلسه با مدیران پروژه
+                                <div id="textMoreHigh"  class=" fw-bold w-100 d-flex justify-content-start" style="font-size: 10;">جلسه با مدیران پروژه
                                     <span class="high rounded-3 d-flex justify-content-center align-items-center">بالا</span>
                                 </div> 
                             </div>
@@ -415,7 +336,7 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
                             <div class=" d-flex align-items-start justify-content-center h-100 " style="width: 7%;">
                                 <input class=" d-flex flex-row h-100 w-50 " type="checkbox" onclick="myFunctionmidel()"></div>
                             <div class=" w-75 h-100 d-flex flex-column justify-content-start align-items-start pt-3" >
-                                <div id="textMoreMidel" class=" fw-bold fs-6 w-100 h-45 d-flex justify-content-start ">خرید میوه و سبزیجات ولبنیات برای خانه
+                                <div id="textMoreMidel" class=" fw-bold w-100 h-45 d-flex justify-content-start " style="font-size: 10;">خرید میوه و سبزیجات ولبنیات برای خانه
                                     <span class="midel rounded-3 d-flex justify-content-center align-items-center">متوسط</span>
                                 </div> 
                             </div>
@@ -435,7 +356,7 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
                             <div class=" d-flex align-items-start justify-content-center h-100 " style="width: 7%;">
                                 <input class=" d-flex flex-row h-100 w-50" type="checkbox" onclick="myFunctionlower()"></div>
                             <div class=" w-75 h-100 d-flex flex-column justify-content-start align-items-start pt-3" >
-                                <div id="textMoreLower" class=" fw-bold fs-6 w-100 h-45 d-flex justify-content-start">تماس با جمشید
+                                <div id="textMoreLower" class=" fw-bold w-100 h-45 d-flex justify-content-start" style="font-size: 10;"> تماس با جمشید
                                     <span class="lower rounded-3 d-flex justify-content-center align-items-center">پایین</span>
                                 </div> 
                             </div>
@@ -455,7 +376,7 @@ xmlns="http://www.w3.org/2000/svg" width="4" height="18" viewBox="0 0 4 18" fill
                            <div class=" d-flex align-items-start justify-content-center h-100 " style="width: 7%;">
                                <input class=" d-flex flex-row h-100 w-50" type="checkbox" onclick="myFunctionlower()"></div>
                            <div class=" w-75 h-100 d-flex flex-column justify-content-start align-items-start pt-3" >
-                               <div id="textMoreLower" class=" fw-bold fs-6 w-100 h-45 d-flex justify-content-start">تماس با جمشید
+                               <div id="textMoreLower" class=" fw-bold w-100 h-45 d-flex justify-content-start" style="font-size: 10;">تماس با جمشید
                                    <span class="lower rounded-3 d-flex justify-content-center align-items-center">پایین</span>
                                </div> 
                            </div>
