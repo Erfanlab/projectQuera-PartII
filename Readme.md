@@ -4,8 +4,8 @@
 <hr>
 <hr>
 <h1>
-New version portfolio + New design
-</h1>
+ Todo-List + Portfolio portfolio + design with Quera </h1>
+ <p> Sass + Html + JavaScript</p>
 <hr style="margin-top:15px;">
 <div>
 <img style="margin:10px" width="36" height="36" src="https://static-00.iconduck.com/assets.00/javascript-js-icon-512x512-q3igwln6.png">
